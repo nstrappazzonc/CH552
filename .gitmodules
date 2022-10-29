@@ -1,0 +1,3 @@
+[submodule "tools/chflasher"]
+	path = tools/chflasher
+	url = git@github.com:hexeguitar/CH55x_python_flasher.git

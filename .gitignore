@@ -1,0 +1,13 @@
+.DS_Store
+*-backups
+*.asm
+*.lst
+*.rel
+*.rst
+*.sym
+*.bin
+*.hex
+*.ihx
+*.lk
+*.map
+*.mem
