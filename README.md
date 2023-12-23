@@ -4,7 +4,7 @@ Este es un facinante y bien dotado MCU de 8-bit de muy bajo coste, diseñado y f
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/img/system_block_diagram.png?raw=true)
 
-El 8051 pertenece a una familia MCS-51, y es tan popular que se ha hecho abierto para que cualquiera pueda conocerlo y replicarlo, en [OpenCores](https://opencores.org/projects/8051) puedes ver los diseños del MCU.
+El 8051 pertenece a una familia MCS-51, y es tan popular que se ha hecho abierto para que cualquiera pueda conocerlo y/o replicarlo, en [OpenCores](https://opencores.org/projects/8051) puedes ver los diseños del MCU.
 
 ## Especificaciones
 

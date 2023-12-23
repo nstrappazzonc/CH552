@@ -30,9 +30,3 @@ export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
 ```
 sdcc -c -V -mmcs51 --model-small -I ../../include/ --xram-size 0x0400 --xram-loc 0x0000 -DFREQ_SYS=24000000 main.c -o main.ihx
 ```
-
-## Flash
-
-```
-
-```

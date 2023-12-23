@@ -1,23 +1,24 @@
 #include <ch552.h>
 #include <utils.h>
 
-SBIT(LED, P1, P17);
-SBIT(BUTTON, P1, P15);
+#define LED P30
+#define BUTTON P32
 
 void main(void) {
     init();
 
-    P1_MOD_OC &= ~(1<<P17);
-    P1_DIR_PU |=  (1<<P17);
+    P3_MOD_OC &= ~(1<<LED);
+    P3_DIR_PU |=  (1<<LED);
 
-    LED = 0;    // Set led to OFF initially.
-    BUTTON = 0; // Set button pin as input.
+    //Set input in pullup mode:
+    P3_MOD_OC |= (1<<BUTTON);
+    P3_DIR_PU |= (1<<BUTTON);
 
     while(1) {
-        if(BUTTON == 1 ) {
-            LED = 1;
+        if(BUTTON) {
+            LED=1;
+        } else {
+            LED=0;
         }
-
-        LED = 0;
     }
 }

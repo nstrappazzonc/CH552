@@ -1,9 +1,5 @@
 #pragma once
 
-#if PWM_INTERRUPT
-//PWM interrupt enable
-extern void  PWMInterruptEnable();
-
 //Frequency division, default clock Fsys
 #define PWMSetClk(CK_SE) (PWM_CK_SE = CK_SE)
 //Set PWM output duty cycle
@@ -36,4 +32,3 @@ extern void  PWMInterruptEnable();
 //PWM interrupt enable
 #define PWMInterruptEnable() {PWM_CTRL |= bPWM_IF_END | bPWM_IE_END; IE_PWMX = 1;}
 #define PWMInterruptDisable() {IE_PWMX = 0;}
-#endif
