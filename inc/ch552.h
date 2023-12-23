@@ -133,10 +133,10 @@ SFR(T2CAP1L, 0xCE);
 SFR(T2CAP1H, 0xCF);
 
 // PWM SFRs
-SFR(PWM_DATA2, 0x9B);
-SFR(PWM_DATA1, 0x9C);
-SFR(PWM_CTRL, 0x9D);
-SFR(PWM_CK_SE, 0x9E);
+SFR(PWM_DATA2, 0x9B); // PWM data for PWM2
+SFR(PWM_DATA1, 0x9C); // PWM data for PWM1
+SFR(PWM_CTRL, 0x9D);  // PWM 1/2 control
+SFR(PWM_CK_SE, 0x9E); // Clock divisor setting
 
 // UART0 SFRs
 SFR(SCON, 0x98);
@@ -254,5 +254,21 @@ SFR(UEP3_DMA_H, 0xE7);
 #define INT_NO_PWMX 11
 #define INT_NO_GPIO 12
 #define INT_NO_WDOG 13
+
+/* Clock and Sleep and Power Registers */
+#define MASK_SYS_CK_SEL 0x07 // Bit mask of system clock Fsys selection
+
+/* PWM1/2 Registers */
+#define bPWM_IE_END     0x80 // enable interrupt for PWM mode cycle end
+#define bPWM2_POLAR     0x40 // PWM2 output polarity: 0=default low and high action, 1=default high and low action
+#define bPWM1_POLAR     0x20 // PWM1 output polarity: 0=default low and high action, 1=default high and low action
+#define bPWM_IF_END     0x10 // interrupt flag for cycle end, write 1 to clear or write PWM_CYCLE or load new data to clear
+#define bPWM2_OUT_EN    0x08 // PWM2 output enable
+#define bPWM1_OUT_EN    0x04 // PWM1 output enable
+#define bPWM_CLR_ALL    0x02 // force clear FIFO and count of PWM1/2
+
+/* PWM1/2 Ports */
+#define bPWM2_PIN_X     0x08 // PWM2 alternate pin enable: 0=PWM2 on P3.4, 1=PWM2 on P3.1
+#define bPWM1_PIN_X     0x04 // PWM1 alternate pin enable: 0=PWM1 on P1.5, 1=PWM1 on P3.0
 
 #endif

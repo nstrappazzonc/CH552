@@ -1,9 +1,6 @@
 # SDCC (Small Devices C Compiler)
 
-Es un compilador libre para el lenguaje C que permite desarrollar microcontroladores de 8-bit.
-
-Sitio oficial: [https://sdcc.sourceforge.net](https://sdcc.sourceforge.net)
-
+Es un compilador libre para el lenguaje Embedded-C que permite desarrollar en microcontroladores de 8-bit. [Sitio oficial](https://sdcc.sourceforge.net)
 
 ## Instalación:
 
@@ -23,13 +20,19 @@ brew install binutils
 Agregar las siguientes líneas al fichero `.bash_profile`:
 
 ```
-export CPPFLAGS="-I/usr/local/opt/binutils/include"
-export LDFLAGS="-L/usr/local/opt/binutils/lib"
-export PATH="/usr/local/opt/binutils/bin:$PATH"
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
 ```
 
 ## Compiler
 
 ```
 sdcc -c -V -mmcs51 --model-small -I ../../include/ --xram-size 0x0400 --xram-loc 0x0000 -DFREQ_SYS=24000000 main.c -o main.ihx
+```
+
+## Flash
+
+```
+
 ```

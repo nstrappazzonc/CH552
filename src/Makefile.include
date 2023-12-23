@@ -55,9 +55,10 @@ clean:
 	$(notdir $(RELS:.rel=.rst)) \
 	$(notdir $(RELS:.rel=.sym)) \
 	$(notdir $(RELS:.rel=.adb)) \
+	$(notdir $(RELS:.rel=.o)) \
+	$(TARGET).bin \
+	$(TARGET).hex \
+	$(TARGET).ihx \
 	$(TARGET).lk \
 	$(TARGET).map \
-	$(TARGET).mem \
-	$(TARGET).ihx \
-	$(TARGET).hex \
-	$(TARGET).bin
+	$(TARGET).mem

@@ -12,7 +12,9 @@ Una vez en modo bootloader, podrá verificar su estado listando los dispositivos
 lsusb
 ```
 
-Si todo esta bien, deberá ver un PID y VID correspondiente a este `4348:55e0`.
+Si todo esta bien, deberá ver un PID y VID correspondiente a este `4348:55e0`. El nombre del device es WinChipHead BRCM20702 Hub
+
+Sino hay un prograna entra en el bootloader, al cabo de unos segundos sino se hace uso del bootloader, se inicia el programa en caso de que exista.
 
 Una vez que este en el modo bootloader, inmediatamente suba el programa con el siguiente comando.
 

@@ -1,11 +1,19 @@
 # Links
 
+Esta es una lista de proyectos relacionados:
+
 https://github.com/Blinkinlabs/ch554_sdcc
 https://github.com/blueskull/CH552-JTAG/tree/main
 https://github.com/DeqingSun/ch55xduino
+https://github.com/frank-zago/isp55e0
 https://github.com/HonghongLu/CH554/tree/master
+https://github.com/jmaselbas/wch-isp/tree/master
+https://github.com/MarsTechHAN/ch552tool
 https://github.com/pfalcon-mirrors/sdcc
+https://github.com/platunus/wch/tree/master
+https://github.com/rgwan/librech551/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
+https://github.com/semickolon/fak/tree/main
 https://github.com/wagiminator/CH552-USB-NRF
 https://github.com/zhuhuijia0001/usb-device-ch551/tree/master
 https://www.electronicshub.org/basics-of-embedded-c-program/
