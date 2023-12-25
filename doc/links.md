@@ -1,5 +1,7 @@
 # Links
 
+https://www.wch.cn/bbs
+
 Esta es una lista de proyectos relacionados:
 
 https://github.com/Blinkinlabs/ch554_sdcc
@@ -16,6 +18,7 @@ https://github.com/platunus/wch/tree/master
 https://github.com/rgwan/librech551/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
 https://github.com/semickolon/fak/tree/main
+https://github.com/SoCXin/CH552/blob/master/project/si5351/i2c.c
 https://github.com/wagiminator/CH552-USB-NRF
 https://github.com/wagiminator/MCU-Flash-Tools/blob/main/chprog.py
 https://github.com/zhuhuijia0001/usb-device-ch551/tree/master
