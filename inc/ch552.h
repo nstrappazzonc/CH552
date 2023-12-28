@@ -15,8 +15,12 @@
 
 // Registers:
 // ----------
+SFR(ADC_CFG,   0x9A); // ADC configuration register.
+SFR(ADC_CTRL,  0x80); // ADC control register.
+SFR(ADC_DATA,  0x9F); // ADC data register. Is ReadOnly.
 SFR(CLOCK_CFG, 0xB9); // System clock configuration register.
 SFR(IE,        0xA8); // Interrupt enable register.
+SFR(IE_EX,     0xE8); // Extend interrupt enable register.
 SFR(P1,        0x90); // P1 port input & output.
 SFR(P1_DIR_PU, 0x93); // P1 port direction control and pull up enable  register.
 SFR(P1_MOD_OC, 0x92); // P1 port output mode register.
@@ -51,14 +55,25 @@ SFR(TMOD,      0x89); // Timer0/1 mode register.
 
 // Interrupt Enable Register (IE):
 // -------------------------------
-SBIT(EA,    0xA8, 7);
-SBIT(E_DIS, 0xA8, 6);
-SBIT(ET2,   0xA8, 5);
-SBIT(ES,    0xA8, 4);
-SBIT(ET1,   0xA8, 3);
-SBIT(EX1,   0xA8, 2);
-SBIT(ET0,   0xA8, 1);
-SBIT(EX0,   0xA8, 0);
+SBIT(EA,    0xA8, 7); // Enable global interrupts: 0=disable, 1=enable if E_DIS=0.
+SBIT(E_DIS, 0xA8, 6); // Disable global interrupts, intend to inhibit interrupt during some flash-ROM operation: 0=enable if EA=1, 1=disable.
+SBIT(ET2,   0xA8, 5); // Enable timer2 interrupt.
+SBIT(ES,    0xA8, 4); // Enable UART0 interrupt.
+SBIT(ET1,   0xA8, 3); // Enable timer1 interrupt.
+SBIT(EX1,   0xA8, 2); // Enable external interrupt INT1.
+SBIT(ET0,   0xA8, 1); // Enable timer0 interrupt.
+SBIT(EX0,   0xA8, 0); // Enable external interrupt INT0.
+
+// Extend Interrupt Enable Register (IE_EX):
+// -----------------------------------------
+SBIT(IE_WDOG,  0xE8, 7); // Enable watch-dog timer interrupt.
+SBIT(IE_GPIO,  0xE8, 6); // Enable GPIO input interrupt.
+SBIT(IE_PWMX,  0xE8, 5); // Enable PWM1/2 interrupt.
+SBIT(IE_UART1, 0xE8, 4); // Enable UART1 interrupt.
+SBIT(IE_ADC,   0xE8, 3); // Enable ADC interrupt.
+SBIT(IE_USB,   0xE8, 2); // Enable USB interrupt.
+SBIT(IE_TKEY,  0xE8, 1); // Enable touch-key timer interrupt.
+SBIT(IE_SPI0,  0xE8, 0); // Enable SPI0 interrupt.
 
 // System clock configuration register (CLOCK_CFG), only can be written in safe mode:
 // ----------------------------------------------------------------------------------
@@ -76,21 +91,49 @@ SBIT(EX0,   0xA8, 0);
                              // - 0: Normal (if Fosc>=16MHz).
                              // - 1: Speed up (if Fosc<16MHz).
 #define bRST            0x08 // RST pin state input bit.
-#define MASK_SYS_CK_SEL 0x07 // System clock selection, [2:0]:
+#define MASK_SYS_CK_SEL 0x07 // System clock selection [2:0], by default is set to 24MHz.
 // -------------------------------------------------------------------------------
 //                 |   System clock   | Relation with crystal | Fsys when        |
 // MASK_SYS_CK_SEL | frequency (Fsys) |    frequency (Fxt)    | Fosc=24MHz       |
+// [2] [1] [0]     |                  |                       |                  |
 // ================|==================|=======================|==================|
-// 000             |Fpll / 512        |Fxt / 128              |187.5KHz          |
-// 001             |Fpll / 128        |Fxt / 32               |750KHz            |
-// 010             |Fpll / 32         |Fxt / 8                |3MHz              |
-// 011             |Fpll / 16         |Fxt / 4                |6MHz              |
-// 100             |Fpll / 8          |Fxt / 2                |12MHz             |
-// 101             |Fpll / 6          |Fxt / 1.5              |16MHz             |
-// 110             |Fpll / 4          |Fxt / 1                |24MHz             |
-// 111             |Fpll / 3          |Fxt / 0.75             |Reserved, disabled|
+//  0   0   0      |Fpll / 512        |Fxt / 128              |187.5KHz          |
+//  0   0   1      |Fpll / 128        |Fxt / 32               |750KHz            |
+//  0   1   0      |Fpll / 32         |Fxt / 8                |3MHz              |
+//  0   1   1      |Fpll / 16         |Fxt / 4                |6MHz              |
+//  1   0   0      |Fpll / 8          |Fxt / 2                |12MHz             |
+//  1   0   1      |Fpll / 6          |Fxt / 1.5              |16MHz             |
+//  1   1   0      |Fpll / 4          |Fxt / 1                |24MHz (Default)   |
+//  1   1   1      |Fpll / 3          |Fxt / 0.75             |Reserved, disabled|
 // -------------------------------------------------------------------------------
 //
+
+// ADC Configuration Register (ADC_CFG):
+// -------------------------------------
+#define bADC_EN           0x08 // Power enable bit of ADC module:
+                               // - 0: ADC module power off, and enter the sleep state.
+                               // - 1: ADC module power ON.
+#define bCMP_EN           0x04 // Power control bit of voltage comparator:
+                               // - 0: Voltage comparator power OFF. Enter the sleep state.
+                               // - 1: ON.
+#define bADC_CLK          0x01 // ADC reference clock frequency selection bit, if the bit is 0, select the slow clock, and 384 Fosc cycles are required for each ADC. If the bit is 1, select the fast clock, and 96 Fosc cycles are required for each ADC.
+
+// ADC Control Register (ADC_CTRL):
+// --------------------------------
+SBIT(CMPO,      0x80, 7); // Result output bit of the voltage comparator:
+                          // - 0: Voltage of the positive phase input is lower than that of the inverted input terminal.
+                          // - 1: Voltage of the positive phase input terminal is higher than that of the inverted input terminal.
+SBIT(CMP_IF,    0x80, 6); // Voltage comparator result change flag:
+                          // - 1: Voltage comparator results have changed. Directly write 0 to reset.
+SBIT(ADC_IF,    0x80, 5); // ADC conversion completed interrupt flag:
+                          // - 1: One ADC conversion is completed. Directly write 0 to reset.
+SBIT(ADC_START, 0x80, 4); // ADC start control bit. Set 1 to start an ADC conversion. This bit is reset automatically after the ADC conversion is completed.
+SBIT(CMP_CHAN,  0x80, 3); // Voltage comparator inverted input terminal selection:
+                          // - 0: AIN1
+                          // - 1: AIN3
+SBIT(ADC_CHAN1, 0x80, 1); // Voltage comparator positive phase input and ADC input channel selection high bit.
+SBIT(ADC_CHAN0, 0x80, 0); // Voltage comparator positive phase input and ADC input channel selection low bit.
+
 // UART0 Control Register (SCON):
 // ------------------------------
 SBIT(SM0, 0x98, 7); // UART0 working mode selection bit 0:
@@ -252,6 +295,13 @@ SBIT(P34, 0xB0, 4); // P3.4
 SBIT(P35, 0xB0, 5); // P3.5
 SBIT(P36, 0xB0, 6); // P3.6
 SBIT(P37, 0xB0, 7); // P3.7
+
+// Port alias:
+// -----------
+#define bAIN0 0x02 // P1.1: AIN0 for ADC
+#define bAIN1 0x10 // P1.4: AIN1 for ADC
+#define bAIN2 0x20 // P1.5: AIN2 for ADC
+#define bAIN3 0x04 // P3.3: AIN3 for ADC
 
 // PWM control register (PWM_CTRL):
 // --------------------------------
