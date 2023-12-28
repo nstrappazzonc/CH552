@@ -19,6 +19,8 @@ Estas son las especificaciones más relevantes del MCU, para más detalles vea l
 - Incorpora un identificador numerico único.
 - Encapsulados disponibles: TSSOP-20, SOP-16, MSOP-10.
 
+![](https://github.com/nstrappazzonc/CH552/blob/main/img/pinout2.png?raw=true)
+
 **IMPORTANTE:** Se debe destacar que hay una limitación con la ROM o el Code Flash es un proceso iFlash™, el cual puede ser programado unas 200 veces. No es tan malo, pero debe tenerlo en cuenta.
 
 ## Esquema minimo
