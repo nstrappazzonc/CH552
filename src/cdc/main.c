@@ -38,7 +38,7 @@ void UART0Init(){
 
 void UART0Write(uint8_t byte) {
     SBUF = byte;
-    while(TI ==0);
+    while(TI == 0);
     TI = 0;
 
     return;

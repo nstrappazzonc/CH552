@@ -1,4 +1,4 @@
-TARGET = fade
+TARGET = cdc
 
 C_FILES = \
 	main.c \

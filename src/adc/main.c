@@ -2,8 +2,6 @@
 #include <utils.h>
 #include "stdio.h"
 
-// #include <string.h>
-
 #define UART0_BAUDRATE 9600
 
 void ADCInit();
@@ -19,13 +17,10 @@ void main(void) {
     ADCChannel(0);
     printf("ADC example AIN%02x\n\r", 0);
 
-    EA = 1;
     while(1) {
         ADC_START = 1;
-        // delay(30);
         while(ADC_START == 0);
         printf("DATA: %03d\n\r", ADC_DATA);
-        // UART0WriteString((uint8_t)ADC_DATA);
         delay(1000);
     }
 }

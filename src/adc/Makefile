@@ -1,4 +1,4 @@
-TARGET = fade
+TARGET = adc
 
 C_FILES = \
 	main.c \

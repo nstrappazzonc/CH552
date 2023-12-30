@@ -1,6 +1,8 @@
-# CH552G
+# CH552
 
-Este es un facinante y bien dotado MCU de 8-bit de muy bajo coste, diseñado y fabricado en china por [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). De momento nos vamos a centrar en el [CH552G](https://www.wch-ic.com/products/CH552.html) que está basado en la arquitectura 8051 [CISC](https://en.wikipedia.org/wiki/Complex_instruction_set_computer) y su núcleo es especificamente E8051, lo más atractivo de este MCU es su puerto USB y un oscilador interno de 24Mhz entre otras cosas. Para programarlo nos debemos basar bastante en el C51.
+Este es un facinante, repotenciado y bien dotado MCU de 8-bit de muy bajo coste, diseñado y fabricado en china por [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). De momento nos vamos a centrar en el [CH552G](https://www.wch-ic.com/products/CH552.html) que está basado en la arquitectura 8051 [CISC](https://en.wikipedia.org/wiki/Complex_instruction_set_computer) y su núcleo es especificamente E8051, lo más atractivo de este MCU es su puerto USB y un oscilador interno de 24Mhz entre otras cosas. Para programarlo nos debemos basar bastante en el C51.
+
+Puedes conseguir los MCU en la tienda oficial de [AliExpress](https://wchofficialstore.es.aliexpress.com/store/1100367542) o en [JLCMC](https://jlcmc.com).
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/img/system_block_diagram.png?raw=true)
 
@@ -25,10 +27,30 @@ El pinout que mostramos es básico para hacerse una idea, hay más funcionalidad
 
 **IMPORTANTE:** Se debe destacar que hay una limitación con la ROM o el Code Flash es un proceso iFlash™, el cual puede ser programado unas 200 veces. No es tan malo, pero debe tenerlo en cuenta.
 
-## Esquema minimo
+## Componentes
+
+Use los siguientes componentes para construir el circuito mínimo:
+
+- Un IC CH552G.
+- Condensador de 100nF x2.
+- Resistencia de 10K x2.
+- Resistencia de 1K x2.
+- Dos pulsadores. Uno para el boot y otro para el reset.
+
+## Esquema mínimo
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/img/minimal_schematic.jpg?raw=true)
 
 En el protoboard nos queda de la siguiente forma:
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/img/minimal_protoboard.jpg?raw=true)
+
+## Códigos fuentes
+
+En este repositorio tiene una colección de códigos fuentes de ejemplos escrito en C para empezar. Todos los códigos fuentes han sido previamente verificados para garantizar su correcto funcionamiento.
+
+- [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Usa un puerto de salida para encender y apaga un LED.
+- [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Usa un puerto de una entrada para un pulsador y otro puerto de salida para el LED.
+- [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
+- [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
+- [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
