@@ -13,7 +13,7 @@ XRAM_SIZE ?= 0x0400
 XRAM_LOC ?= 0x0000
 CODE_SIZE ?= 0x3800
 ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-CFLAGS := -V -mmcs51 --model-small \
+CFLAGS := -mmcs51 --model-small --no-xinit-opt \
 	--xram-size $(XRAM_SIZE) --xram-loc $(XRAM_LOC) \
 	--code-size $(CODE_SIZE) \
 	-I$(ROOT_DIR)../inc -DFREQ_SYS=$(FREQ_SYS) \
