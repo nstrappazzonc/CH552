@@ -24,7 +24,6 @@ __code USB_DEV_DESCR DevDescr = {
 // Configuration Descriptor
 // ===================================================================================
 __code USB_CFG_DESCR_CDC CfgDescr = {
-
   // Configuration Descriptor
   .config = {
     .bLength            = sizeof(USB_CFG_DESCR),  // size of the descriptor in bytes
@@ -36,7 +35,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     .bmAttributes       = 0x80,                   // attributes = bus powered, no wakeup
     .MaxPower           = USB_MAX_POWER_mA / 2    // in 2mA units
   },
-
   // Interface Association Descriptor
   .association = {
     .bLength            = sizeof(USB_IAD_DESCR),  // size of the descriptor in bytes
@@ -48,7 +46,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     .bFunctionProtocol  = 1,                      // 1: AT command protocol
     .iFunction          = 4                       // index of String Descriptor
   },
-
   // Interface Descriptor: Interface 0 (CDC)
   .interface0 = {
     .bLength            = sizeof(USB_ITF_DESCR),  // size of the descriptor in bytes: 9
@@ -61,7 +58,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     .bInterfaceProtocol = 1,                      // 1: AT command protocol
     .iInterface         = 4                       // index of String Descriptor
   },
-
   // Functional Descriptors for Interface 0
   .functional = {
     0x05,0x24,0x00,0x10,0x01,                     // header functional descriptor
@@ -69,7 +65,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     0x04,0x24,0x02,0x02,                          // direct line management functional descriptor
     0x05,0x24,0x06,0x00,0x01                      // union functional descriptor: CDC IF0, Data IF1
   },
-
   // Endpoint Descriptor: Endpoint 1 (CDC Upload, Interrupt)
   .ep1IN = {
     .bLength            = sizeof(USB_ENDP_DESCR), // size of the descriptor in bytes: 7
@@ -79,7 +74,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     .wMaxPacketSize     = EP1_SIZE,               // max packet size
     .bInterval          = 1                       // polling intervall in ms
   },
-
   // Interface Descriptor: Interface 1 (Data)
   .interface1 = {
     .bLength            = sizeof(USB_ITF_DESCR),  // size of the descriptor in bytes: 9
@@ -92,7 +86,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     .bInterfaceProtocol = 0,                      // interface protocol
     .iInterface         = 4                       // index of String Descriptor
   },
-
   // Endpoint Descriptor: Endpoint 2 (OUT)
   .ep2OUT = {
     .bLength            = sizeof(USB_ENDP_DESCR), // size of the descriptor in bytes: 7
@@ -102,7 +95,6 @@ __code USB_CFG_DESCR_CDC CfgDescr = {
     .wMaxPacketSize     = EP2_SIZE,               // max packet size
     .bInterval          = 0                       // polling intervall (ignored for bulk)
   },
-
   // Endpoint Descriptor: Endpoint 2 (IN)
   .ep2IN = {
     .bLength            = sizeof(USB_ENDP_DESCR), // size of the descriptor in bytes: 7

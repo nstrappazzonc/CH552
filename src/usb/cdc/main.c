@@ -4,6 +4,7 @@
 #include "usb_cdc.h"
 #include "utils.h"
 
+void USBInit(void);
 void USBInterrupt(void);
 void USB_ISR(void) __interrupt(INT_NO_USB) {
   USBInterrupt();
