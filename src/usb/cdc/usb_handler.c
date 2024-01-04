@@ -268,7 +268,7 @@ void USBInterrupt(void) {   // inline not really working in multiple files in SD
   if(UIF_BUS_RST) {
     UEP0_CTRL = UEP_R_RES_ACK | UEP_T_RES_NAK;
 
-    CDC_reset();
+    USBReset();
 
     USB_DEV_AD   = 0x00;
     UIF_SUSPEND  = 0;

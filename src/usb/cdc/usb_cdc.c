@@ -27,22 +27,22 @@ volatile __bit CDC_writeBusyFlag = 0;               // flag of whether upload po
 // ===================================================================================
 
 // Check number of bytes in the IN buffer
-uint8_t CDC_available(void) {
+uint8_t USBAvailable(void) {
   return CDC_readByteCount;
 }
 
 // Check if OUT buffer is ready to be written
-__bit CDC_ready(void) {
+__bit USBReady(void) {
   return(!CDC_writeBusyFlag);
 }
 
 // Flush the OUT buffer
 void USBFlush(void) {
-  if(!CDC_writeBusyFlag && CDC_writePointer > 0) {      // not busy and buffer not empty?
-    UEP2_T_LEN = CDC_writePointer;                      // number of bytes in OUT buffer
+  if(!CDC_writeBusyFlag && CDC_writePointer > 0) {            // not busy and buffer not empty?
+    UEP2_T_LEN = CDC_writePointer;                            // number of bytes in OUT buffer
     UEP2_CTRL  = UEP2_CTRL & ~MASK_UEP_T_RES | UEP_T_RES_ACK; // respond ACK
-    CDC_writeBusyFlag = 1;                              // busy for now
-    CDC_writePointer  = 0;                              // reset write pointer
+    CDC_writeBusyFlag = 1;                                    // busy for now
+    CDC_writePointer  = 0;                                    // reset write pointer
   }
 }
 
@@ -50,27 +50,27 @@ void USBFlush(void) {
 void USBWrite(char c) {
   while(CDC_writeBusyFlag);                             // wait for ready to write
   EP2_buffer[64 + CDC_writePointer++] = c;              // write character
-  if(CDC_writePointer == EP2_SIZE) USBFlush();         // flush if buffer full
+  if(CDC_writePointer == EP2_SIZE) USBFlush();          // flush if buffer full
 }
 
 // Write string to OUT buffer
-void CDC_print(char* str) {
-  while(*str) USBWrite(*str++);                        // write each char of string
+void _USBWriteString(char* str) {
+  while(*str) USBWrite(*str++);
 }
 
 // Write string with newline to OUT buffer and flush
 void USBWriteString(char* str) {
-  CDC_print(str);                                       // write string
-  USBFlush();                                          // flush OUT buffer
+  _USBWriteString(str);
+  USBFlush();
 }
 
 // Read single character from IN buffer
 char USBRead(void) {
   char data;
-  while(!CDC_readByteCount);                            // wait for data
-  data = EP2_buffer[CDC_readPointer++];                 // get character
-  if(--CDC_readByteCount == 0)                          // dec number of bytes in buffer
-    UEP2_CTRL = UEP2_CTRL & ~MASK_UEP_R_RES | UEP_R_RES_ACK;// request new data if empty
+  while(!CDC_readByteCount);                                 // wait for data
+  data = EP2_buffer[CDC_readPointer++];                      // get character
+  if(--CDC_readByteCount == 0)                               // dec number of bytes in buffer
+    UEP2_CTRL = UEP2_CTRL & ~MASK_UEP_R_RES | UEP_R_RES_ACK; // request new data if empty
   return data;
 }
 
@@ -79,11 +79,11 @@ char USBRead(void) {
 // ===================================================================================
 
 // Reset CDC parameters
-void CDC_reset(void) {
+void USBReset(void) {
   UEP1_CTRL = bUEP_AUTO_TOG | UEP_T_RES_NAK;
   UEP2_CTRL = bUEP_AUTO_TOG | UEP_T_RES_NAK | UEP_R_RES_ACK;
-  CDC_readByteCount = 0;                    // reset received bytes counter
-  CDC_writeBusyFlag = 0;                    // reset write busy flag
+  CDC_readByteCount = 0; // reset received bytes counter
+  CDC_writeBusyFlag = 0; // reset write busy flag
 }
 
 // Handle non-standard control requests
