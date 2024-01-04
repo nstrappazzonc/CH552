@@ -4,6 +4,7 @@
 #include "usb_cdc.h"
 #include "utils.h"
 
+void USBInterrupt(void);
 void USB_ISR(void) __interrupt(INT_NO_USB) {
   USBInterrupt();
 }
@@ -13,7 +14,7 @@ void main(void) {
   USBInit();
 
   while(1){
-    CDC_println("Hello from CH552T with USB");
+    USBWriteString("Hello from CH552T with USB\n\r");
     delay(1000);
   }
 }

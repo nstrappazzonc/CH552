@@ -59,10 +59,8 @@ void CDC_print(char* str) {
 }
 
 // Write string with newline to OUT buffer and flush
-void CDC_println(char* str) {
+void USBWriteString(char* str) {
   CDC_print(str);                                       // write string
-  CDC_write('\n');                                      // write new line
-  CDC_write('\r');
   CDC_flush();                                          // flush OUT buffer
 }
 

@@ -15,8 +15,8 @@
 void CDC_flush(void);             // flush OUT buffer
 char CDC_read(void);              // read single character from IN buffer
 void CDC_write(char c);           // write single character to OUT buffer
-void CDC_print(char* str);        // write string to OUT buffer
-void CDC_println(char* str);      // write string with newline to OUT buffer and flush
+void USBWriteString(char* str);        // write string to OUT buffer
+// void CDC_println(char* str);      // write string with newline to OUT buffer and flush
 uint8_t CDC_available(void);      // check number of bytes in the IN buffer
 __bit CDC_ready(void);            // check if OUT buffer is ready to be written
 #define CDC_writeflush(c)         {CDC_write(c);CDC_flush();}   // write & flush char
