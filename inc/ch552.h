@@ -54,7 +54,7 @@ SFR(UEP4_1_MOD, 0xEA); // Endpoint1, endpoint4 mode control register.
 SFR(USB_CTRL,   0xE2); // USB control register.
 SFR(USB_DEV_AD, 0xE3); // USB device address register.
 SFR(USB_INT_EN, 0xE1); // USB interrupt enable register.
-SFR(USB_INT_FG, 0xD8); // USB interrupt flag register.
+// SFR(USB_INT_FG, 0xD8); // USB interrupt flag register.
 SFR(USB_INT_ST, 0xD9); // USB interrupt status register (read only).
 SFR(USB_RX_LEN, 0xDB); // USB reception length register (read only).
 SFR16(UEP0_DMA, 0xEC); // UEP0_DMA_L and UEP0_DMA_H constitute a 16-bit SFR.

@@ -26,11 +26,6 @@ volatile __xdata uint8_t CDC_readPointer   = 0;     // data pointer for fetching
 volatile __xdata uint8_t CDC_writePointer  = 0;     // data pointer for writing
 volatile __bit CDC_writeBusyFlag = 0;               // flag of whether upload pointer is busy
 
-// CDC class requests
-#define SET_LINE_CODING         0x20  // host configures line coding
-#define GET_LINE_CODING         0x21  // host reads configured line coding
-#define SET_CONTROL_LINE_STATE  0x22  // generates RS-232/V.24 style control signals
-
 // ===================================================================================
 // Front End Functions
 // ===================================================================================

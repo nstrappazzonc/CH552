@@ -4,7 +4,7 @@
 #define USB_DEVICE_VERSION  0x0100 // v1.0 (BCD-format)
 
 // USB configuration descriptor
-#define USB_MAX_POWER_mA    250       // max power in mA
+#define USB_MAX_POWER_mA    250    // max power in mA
 
 // USB descriptor strings
 #define MANUFACTURER_STR    'n','s','t','r','a','p','p','a','z','z','o','n','c'

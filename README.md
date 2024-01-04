@@ -54,3 +54,4 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
 - [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
+- [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc) Envia y recibe mensajes a través del puerto USB.

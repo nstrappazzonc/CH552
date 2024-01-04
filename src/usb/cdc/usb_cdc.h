@@ -1,6 +1,15 @@
 #include <stdint.h>
 
 // ===================================================================================
+// Variables and Defines
+// ===================================================================================
+
+// CDC class requests
+#define SET_LINE_CODING         0x20  // host configures line coding
+#define GET_LINE_CODING         0x21  // host reads configured line coding
+#define SET_CONTROL_LINE_STATE  0x22  // generates RS-232/V.24 style control signals
+
+// ===================================================================================
 // CDC Functions
 // ===================================================================================
 void CDC_flush(void);             // flush OUT buffer
