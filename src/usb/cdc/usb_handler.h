@@ -20,21 +20,6 @@ void CDC_EP2_IN(void);
 void CDC_EP2_OUT(void);
 
 // ===================================================================================
-// USB Handler Defines
-// ===================================================================================
-// Custom USB handler functions
-#define USB_RESET_handler   CDC_reset         // custom USB reset handler
-#define USB_CTRL_NS_handler CDC_control       // handle custom non-standard requests
-
-// Endpoint callback functions
-#define EP0_SETUP_callback  USB_EP0_SETUP
-#define EP0_IN_callback     USB_EP0_IN
-#define EP0_OUT_callback    CDC_EP0_OUT
-#define EP1_IN_callback     CDC_EP1_IN
-#define EP2_IN_callback     CDC_EP2_IN
-#define EP2_OUT_callback    CDC_EP2_OUT
-
-// ===================================================================================
 // Functions
 // ===================================================================================
 void USBInterrupt(void);
