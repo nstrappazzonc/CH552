@@ -1,4 +1,20 @@
 #include <stdint.h>
+#include "config.h"
+
+#define MIN(a,b) ((a>b) ? b : a)
+#define EP_BUF_SIZE(x) (x+2<64 ? x+2 : 64)
+
+#define EP0_SIZE 8
+#define EP1_SIZE 8
+#define EP2_SIZE 64
+
+#define EP0_ADDR 0
+#define EP1_ADDR (EP0_ADDR + EP0_BUF_SIZE)
+#define EP2_ADDR (EP1_ADDR + EP1_BUF_SIZE)
+
+#define EP0_BUF_SIZE EP_BUF_SIZE(EP0_SIZE)
+#define EP1_BUF_SIZE EP_BUF_SIZE(EP1_SIZE)
+#define EP2_BUF_SIZE EP_BUF_SIZE(EP2_SIZE) + 64
 
 // USB standard device request code
 #define USB_GET_STATUS          0x00
@@ -117,3 +133,47 @@ typedef struct _USB_ENDPOINT_DESCR {
     uint8_t  bInterval;
 } USB_ENDP_DESCR, *PUSB_ENDP_DESCR;
 typedef USB_ENDP_DESCR __xdata *PXUSB_ENDP_DESCR;
+
+typedef struct _USB_CFG_DESCR_CDC {
+  USB_CFG_DESCR config;
+  USB_IAD_DESCR association;
+  USB_ITF_DESCR interface0;
+  uint8_t functional[19];
+  USB_ENDP_DESCR ep1IN;
+  USB_ITF_DESCR interface1;
+  USB_ENDP_DESCR ep2OUT;
+  USB_ENDP_DESCR ep2IN;
+} USB_CFG_DESCR_CDC, *PUSB_CFG_DESCR_CDC;
+typedef USB_CFG_DESCR_CDC __xdata *PXUSB_CFG_DESCR_CDC;
+
+typedef struct _CDC_LINE_CODING_TYPE {
+  uint32_t baudrate;
+  uint8_t  stopbits;
+  uint8_t  parity;
+  uint8_t  databits;
+} CDC_LINE_CODING_TYPE, *PCDC_LINE_CODING_TYPE;
+
+extern __code USB_DEV_DESCR DevDescr;
+extern __code USB_CFG_DESCR_CDC CfgDescr;
+extern __xdata CDC_LINE_CODING_TYPE CDC_lineCodingB;
+extern __code uint16_t ManufDescr[];
+extern __code uint16_t ProdDescr[];
+extern __code uint16_t SerDescr[];
+extern volatile uint8_t  SetupReq;
+extern volatile uint16_t SetupLen;
+
+__xdata __at (EP0_ADDR) uint8_t EP0_buffer[EP0_BUF_SIZE];
+__xdata __at (EP1_ADDR) uint8_t EP1_buffer[EP1_BUF_SIZE];
+__xdata __at (EP2_ADDR) uint8_t EP2_buffer[EP2_BUF_SIZE];
+
+#define USB_STR_DESCR_i1 (uint8_t*)ManufDescr
+#define USB_STR_DESCR_i2 (uint8_t*)ProdDescr
+#define USB_STR_DESCR_i3 (uint8_t*)SerDescr
+#define setupBuf ((PUSB_SETUP_REQ)EP0_buffer)
+
+void USB_EP1_IN(void);
+void USB_EP2_IN(void);
+void USBInterrupt(void);
+void USBInit(void);
+void USBWrite(char c);
+void USBWriteString(char* str);

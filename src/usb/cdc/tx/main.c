@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "ch552.h"
-#include "usb_cdc.h"
+#include "usb.h"
 #include "utils.h"
 
 void USBInit(void);

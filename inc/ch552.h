@@ -408,6 +408,7 @@ SBIT(bPWM_CLR_ALL, 0x9D, 1); // Empty PWM1 and PWM2 counts and FIFO.
 #define UIS_TOKEN_SOF     0x10
 #define UIS_TOKEN_IN      0x20
 #define UIS_TOKEN_SETUP   0x30
+#define MASK_USB_ADDR     0x7F
 SFR(USB_INT_FG, 0xD8);  // USB interrupt flag
    SBIT(U_IS_NAK, 0xD8, 7); // ReadOnly: indicate current USB transfer is NAK received
    SBIT(U_TOG_OK, 0xD8, 6); // ReadOnly: indicate current USB transfer toggle is OK
@@ -427,5 +428,6 @@ SFR(XBUS_AUX, 0xA2);  // xBUS auxiliary setting
 
 SBIT(U_TOG_OK,  0xD8, 6);           // ReadOnly: indicate current USB transfer toggle is OK
 SBIT(UIF_TRANSFER, 0xD8, 1);        // USB transfer completion interrupt flag, direct bit address clear or write 1 to clear
-
+#define bUC_RESET_SIE 0x04 // force reset USB SIE, need software clear
+#define bUC_CLR_ALL 0x02   // force clear FIFO and count of USB
 #endif

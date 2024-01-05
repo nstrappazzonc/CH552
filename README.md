@@ -1,6 +1,6 @@
 # CH552
 
-Este es un facinante, repotenciado y bien dotado MCU de 8-bit de muy bajo coste, diseñado y fabricado en china por [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). De momento nos vamos a centrar en el [CH552G](https://www.wch-ic.com/products/CH552.html) que está basado en la arquitectura 8051 [CISC](https://en.wikipedia.org/wiki/Complex_instruction_set_computer) y su núcleo es especificamente E8051, lo más atractivo de este MCU es su puerto USB y un oscilador interno de 24Mhz entre otras cosas. Para programarlo nos debemos basar bastante en el C51.
+Este es un facinante, repotenciado y bien dotado MCU de 8-bit de muy bajo coste, diseñado y fabricado en china por [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). De momento nos vamos a centrar en el [CH552G](https://www.wch-ic.com/products/CH552.html) que está basado en la arquitectura 8051 [CISC](https://en.wikipedia.org/wiki/Complex_instruction_set_computer) y su núcleo es especificamente E8051, lo más atractivo de este MCU es su puerto USB y un oscilador interno de 24Mhz entre otras cosas. Para programarlo nos debemos basar bastante en el C51. Existen diferentes empaquetados y versiones del MCU cómo; CH551, CH552, CH554 y CH559.
 
 Puedes conseguir los MCU en la tienda oficial de [AliExpress](https://wchofficialstore.es.aliexpress.com/store/1100367542) o en [JLCMC](https://jlcmc.com).
 
@@ -54,4 +54,4 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
 - [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
-- [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc) Envia y recibe mensajes a través del puerto USB.
+- [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
