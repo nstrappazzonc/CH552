@@ -19,6 +19,7 @@ https://github.com/rgwan/librech551/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
 https://github.com/semickolon/fak/tree/main
 https://github.com/SoCXin/CH552/blob/master/project/si5351/i2c.c
+https://github.com/wagiminator/CH552-MouseWiggler
 https://github.com/wagiminator/CH552-USB-Knob
 https://github.com/wagiminator/CH552-USB-NRF
 https://github.com/wagiminator/MCU-Flash-Tools/blob/main/chprog.py
