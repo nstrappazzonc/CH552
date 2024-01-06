@@ -55,3 +55,9 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
 - [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
+
+## Proyectos relacionados
+
+- [CH334 - HUB USB 2.0](https://github.com/nstrappazzonc/CH334)
+- [CH340 - USB 2.0 to Serial](https://github.com/nstrappazzonc/CH340)
+- [CH9141 - Bluetooth Serial Transparent](https://github.com/nstrappazzonc/CH9141)
