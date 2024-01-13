@@ -1,0 +1,73 @@
+(footprint "USB_C_MC_112D" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (descr "USB 2.0 Type C Receptacle, https://gct.co/Files/Drawings/USB4085.pdf")
+  (tags "USB Type-C Receptacle Through-hole Right angle")
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0.655 -5.3125) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 59110c11-6f9e-4b43-85a7-3f19345860a9)
+  )
+  (fp_text value "USB_C_Receptacle_GCT_USB4085" (at 0.655 6.4125) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 00ab8c3f-f9c4-43a6-b2b8-0a2c9ea1efae)
+  )
+  (fp_text user "PCB Edge" (at -0.07 -0.2625) (layer "Dwgs.User")
+      (effects (font (size 0.5 0.5) (thickness 0.1)))
+    (tstamp 67b623c5-dcce-4948-9705-8bbb63602c5b)
+  )
+  (fp_text user "${REFERENCE}" (at -0.0848 -7.4495) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp b33636e6-e4b8-44f1-96cd-5fdd0645e656)
+  )
+  (fp_rect (start -4.82 -4.5625) (end 4.83 4.5375)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd") (tstamp 587b646f-b881-4684-8518-6026f7773d9a))
+  (fp_line (start 4.32 4.4875) (end 4.32 -4.4875)
+    (stroke (width 0.1) (type default)) (layer "F.Fab") (tstamp 072fdf1c-aca3-4a82-a80f-5b38ed7f1255))
+  (fp_rect (start -4.32 -4.4875) (end 4.32 4.4875)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 1d2c587d-fd9f-4f3b-8338-afba11cda2d4))
+  (pad "A1" thru_hole circle (at -2.975 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 973433db-dbe2-4b63-a2c7-f47e00988053))
+  (pad "A4" thru_hole circle (at -2.125 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 99d6436b-fa55-4f52-8e98-47cec3bfc02d))
+  (pad "A5" thru_hole circle (at -1.275 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 8f0ab270-50b1-4135-8a7e-b7c59f6e45ee))
+  (pad "A6" thru_hole circle (at -0.425 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 68d6c6ab-c45c-499e-82bd-63b20a3129a8))
+  (pad "A7" thru_hole circle (at 0.425 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp b8d12c18-f03d-4993-a88e-e1b6720ba265))
+  (pad "A8" thru_hole circle (at 1.275 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 41cc4085-e8d1-4114-876c-ebd9daa78a9f))
+  (pad "A9" thru_hole circle (at 2.125 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp ff3ac5f8-191a-4b29-9c51-26f675661566))
+  (pad "A12" thru_hole circle (at 2.975 -3.5625) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 013f0886-478f-4df3-843e-83c45ed19dd1))
+  (pad "B1" thru_hole circle (at 2.975 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 065ce6fb-d3bc-4f0f-8c50-2d505cb1962b))
+  (pad "B4" thru_hole circle (at 2.125 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 99ccba2d-a49d-486f-9691-c7fdd26402cf))
+  (pad "B5" thru_hole circle (at 1.275 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp e119bdb8-7639-43f7-8432-92c041d6914b))
+  (pad "B6" thru_hole circle (at 0.425 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp fab6ff1c-b2f6-4f20-bc26-9ec338d77b24))
+  (pad "B7" thru_hole circle (at -0.425 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 60bcd0e0-3717-4c6b-b499-416004cfd7c6))
+  (pad "B8" thru_hole circle (at -1.275 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp e3838170-a370-4746-a3b2-9aaf15ea5082))
+  (pad "B9" thru_hole circle (at -2.125 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 8d976016-b965-4db1-817f-1974b76ce035))
+  (pad "B12" thru_hole circle (at -2.975 -2.2125) (size 0.7 0.7) (drill 0.4) (layers "*.Cu" "*.Mask") (tstamp 0ab0e897-5d63-4ef1-9ee6-3700773a5942))
+  (pad "S1" thru_hole oval (at -4.32 -3.0625) (size 0.9 3.2) (drill oval 0.6 2) (layers "*.Cu" "*.Mask") (tstamp cefc21b4-897a-4704-b79f-b03cac7e6196))
+  (pad "S1" thru_hole oval (at -4.32 1.0875) (size 0.9 2.3) (drill oval 0.6 1.6) (layers "*.Cu" "*.Mask") (tstamp b2b1cf48-5ba1-49a6-b657-dbfc4b173eb0))
+  (pad "S1" thru_hole oval (at 4.32 -3.0625) (size 0.9 3.2) (drill oval 0.6 2) (layers "*.Cu" "*.Mask") (tstamp c2db037b-000a-48fc-8842-ed285004ea8a))
+  (pad "S1" thru_hole oval (at 4.32 1.0875) (size 0.9 2.3) (drill oval 0.6 1.6) (layers "*.Cu" "*.Mask") (tstamp 76e830c0-2c82-4d14-a64c-e8c8edac400f))
+  (group "" (id e8d23598-2a21-4486-b6ec-323e25bfeaaf)
+    (members
+      013f0886-478f-4df3-843e-83c45ed19dd1
+      065ce6fb-d3bc-4f0f-8c50-2d505cb1962b
+      0ab0e897-5d63-4ef1-9ee6-3700773a5942
+      41cc4085-e8d1-4114-876c-ebd9daa78a9f
+      60bcd0e0-3717-4c6b-b499-416004cfd7c6
+      68d6c6ab-c45c-499e-82bd-63b20a3129a8
+      8d976016-b965-4db1-817f-1974b76ce035
+      8f0ab270-50b1-4135-8a7e-b7c59f6e45ee
+      973433db-dbe2-4b63-a2c7-f47e00988053
+      99ccba2d-a49d-486f-9691-c7fdd26402cf
+      99d6436b-fa55-4f52-8e98-47cec3bfc02d
+      b8d12c18-f03d-4993-a88e-e1b6720ba265
+      e119bdb8-7639-43f7-8432-92c041d6914b
+      e3838170-a370-4746-a3b2-9aaf15ea5082
+      fab6ff1c-b2f6-4f20-bc26-9ec338d77b24
+      ff3ac5f8-191a-4b29-9c51-26f675661566
+    )
+  )
+  (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4085.wrl"
+    (offset (xyz -2.32 3.5125 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
+)
