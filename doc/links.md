@@ -7,11 +7,14 @@ Esta es una lista de proyectos relacionados que han servido para investigar:
 https://github.com/Blinkinlabs/ch554_sdcc
 https://github.com/blueskull/CH552-JTAG/tree/main
 https://github.com/DeqingSun/ch55xduino
+https://github.com/ElectronicCats/businessCard-ch55x/tree/main
 https://github.com/frank-zago/isp55e0
 https://github.com/hexeguitar/CH552-devkit
 https://github.com/hexeguitar/CH55x_python_flasher
 https://github.com/HonghongLu/CH554/tree/master
 https://github.com/jmaselbas/wch-isp/tree/master
+https://github.com/limingjie/CH552-Power-Monitor/tree/main
+https://github.com/limingjie/PINOUTS/tree/main/MCU/CH55x
 https://github.com/MarsTechHAN/ch552tool
 https://github.com/pfalcon-mirrors/sdcc
 https://github.com/platunus/wch/tree/master
