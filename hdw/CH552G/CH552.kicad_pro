@@ -142,30 +142,30 @@
       "teardrop_parameters": [
         {
           "td_curve_segcount": 5,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_height_ratio": 0.6,
+          "td_length_ratio": 0.3,
           "td_maxheight": 1.0,
           "td_maxlen": 1.0,
           "td_target_name": "td_round_shape",
-          "td_width_to_size_filter_ratio": 0.9
+          "td_width_to_size_filter_ratio": 0.5
         },
         {
           "td_curve_segcount": 5,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_height_ratio": 0.6,
+          "td_length_ratio": 0.2,
           "td_maxheight": 1.0,
           "td_maxlen": 1.0,
           "td_target_name": "td_rect_shape",
-          "td_width_to_size_filter_ratio": 0.9
+          "td_width_to_size_filter_ratio": 0.5
         },
         {
           "td_curve_segcount": 5,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_height_ratio": 0.6,
+          "td_length_ratio": 0.3,
           "td_maxheight": 1.0,
           "td_maxlen": 1.0,
           "td_target_name": "td_track_end",
-          "td_width_to_size_filter_ratio": 0.9
+          "td_width_to_size_filter_ratio": 0.5
         }
       ],
       "track_widths": [],
