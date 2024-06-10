@@ -1,4 +1,4 @@
-# Fundamentos de lenguaje C para sistemas Embebidos
+# Fundamentos de lenguaje C51
 
 ## Estructura básica
 
