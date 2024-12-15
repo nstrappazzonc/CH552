@@ -6,8 +6,6 @@ Puedes conseguir los MCU en la tienda oficial de [AliExpress](https://wchofficia
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/img/system_block_diagram.png?raw=true)
 
-El 8051 pertenece a una familia MCS-51, y es tan popular que se ha hecho abierto para que cualquiera pueda conocerlo en [OpenCores](https://opencores.org/projects/8051) y ver los diseños del MCU.
-
 Por ejemplo, un MCU de la familia AT89LP51 que tiene menos prestaciones tiene un coste x3 en comparación a la familia CH55X. Obviamente la comunidad para el soporte de Microchip es muy grande y varoable a comparación a la de WCH, lo importante es que la documentación oficial sea buena y la arquitectura la misma, y con algo de paciencia se pueden lograr cosas.
 
 ## Especificaciones
