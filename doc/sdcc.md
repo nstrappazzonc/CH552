@@ -28,5 +28,5 @@ export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
 ## Compiler
 
 ```
-sdcc -c -V -mmcs51 --model-small -I ../../include/ --xram-size 0x0400 --xram-loc 0x0000 -DFREQ_SYS=24000000 main.c -o main.ihx
+sdcc -c -V -mmcs51 --model-small -I ../../inc/ --xram-size 0x0400 --xram-loc 0x0000 -DFREQ_SYS=24000000 main.c -o main.ihx
 ```
