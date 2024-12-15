@@ -56,6 +56,15 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
 
+## Documentacion
+
+Es una documentacion basica de lo que necesitas para compilar y subir el firmware al MCU, el datasheet, enlaces de interes, y mucho mas.
+
+- [SDCC (Small Devices C Compiler)](https://github.com/nstrappazzonc/CH552/blob/main/doc/sdcc.md) Explica como instalar y usar el compilador.
+- [chflasher](https://github.com/nstrappazzonc/CH552/blob/main/doc/flash.md) Script para subir el firmware al MCU.
+- [Bootloader](https://github.com/nstrappazzonc/CH552/blob/main/doc/flash.md) El MCU tiene un Bootloader que debemos saber como entrar para subir el firmware.
+- [Datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf).
+
 ## Proyectos relacionados
 
 - [CH334 - HUB USB 2.0](https://github.com/nstrappazzonc/CH334)
