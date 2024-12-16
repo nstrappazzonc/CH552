@@ -703,290 +703,6 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_01x07"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x07"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x07_1_1"
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 8.89)
-					(end 1.27 -8.89)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 7.62 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector_Generic:Conn_01x08"
 			(pin_names
 				(offset 1.016) hide)
@@ -3449,7 +3165,7 @@
 	)
 	(global_label "P3.0"
 		(shape input)
-		(at 95.25 95.25 180)
+		(at 95.25 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3459,7 +3175,7 @@
 		)
 		(uuid "b8e14960-0747-4f8f-ab7a-c4d2da45d640")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.5431 95.1706 0)
+			(at 88.5431 92.6306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3801,7 +3517,7 @@
 	)
 	(global_label "P3.1"
 		(shape input)
-		(at 95.25 92.71 180)
+		(at 95.25 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3811,7 +3527,7 @@
 		)
 		(uuid "fccbcef8-3d60-4e75-a913-ee8d8c68fe84")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.5431 92.6306 0)
+			(at 88.5431 95.1706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4094,91 +3810,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x07")
-		(at 100.33 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2b13f494-141a-429f-b7d1-7e1ad91383d9")
-		(property "Reference" "J3"
-			(at 102.87 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x07"
-			(at 102.87 101.5999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
-			(at 100.33 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 100.33 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 100.33 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "362a3527-16d0-464f-a9ad-1d8c27b45f47")
-		)
-		(pin "2"
-			(uuid "8e9368bd-17d4-4bdd-8dab-cb75c7b507e7")
-		)
-		(pin "3"
-			(uuid "6c0cef7e-e72f-42b4-b199-7cff5a6fb85e")
-		)
-		(pin "4"
-			(uuid "833ca373-fef7-46f8-b3f4-616be5367ffa")
-		)
-		(pin "5"
-			(uuid "73c780b9-e011-4df8-b5fe-95fceebfc890")
-		)
-		(pin "6"
-			(uuid "0c9b0b9b-4e98-4642-b6df-007f95c8f144")
-		)
-		(pin "7"
-			(uuid "f405e148-5932-44dc-8969-675ea6254ff3")
-		)
-		(instances
-			(project "CH552"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0")
 		(at 208.28 102.87 0)
 		(unit 1)
@@ -4300,7 +3931,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4bfec81f-5018-4f1e-b96b-086be07f2faa")
-		(property "Reference" "R2"
+		(property "Reference" "R4"
 			(at 161.29 53.7464 90)
 			(effects
 				(font
@@ -4352,7 +3983,7 @@
 		(instances
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -4428,12 +4059,12 @@
 	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 149.86 45.72 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "56f59f64-5125-4d69-aee3-6e12aa328caa")
 		(property "Reference" "SW1"
 			(at 149.86 38.1 0)
@@ -4556,6 +4187,94 @@
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x08")
+		(at 100.33 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "653b7596-ef64-4d9f-ba64-be9be23d3337")
+		(property "Reference" "J2"
+			(at 102.87 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x08"
+			(at 102.87 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
+			(at 100.33 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a845a2cf-883d-4209-a389-e3858b2c1a3e")
+		)
+		(pin "2"
+			(uuid "cee14276-9ae9-433a-a732-441866386845")
+		)
+		(pin "3"
+			(uuid "e91f2477-087d-42dd-8bcf-1e03a7721835")
+		)
+		(pin "4"
+			(uuid "bd7a3afa-aae9-44cd-9972-40c2256ce1d7")
+		)
+		(pin "5"
+			(uuid "975aa9a0-a97c-4936-add3-ae7b3159f812")
+		)
+		(pin "6"
+			(uuid "dd2fda7f-171e-4386-8910-6a614b9c14e5")
+		)
+		(pin "7"
+			(uuid "8ba5618b-9b48-4fae-adb4-f5a596ceee32")
+		)
+		(pin "8"
+			(uuid "4cde3e04-0229-4357-9156-cb0ce8bda180")
+		)
+		(instances
+			(project "CH552"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -5065,7 +4784,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "940c1e6a-069a-4096-9942-2a506c9ab083")
-		(property "Reference" "R3"
+		(property "Reference" "R1"
 			(at 153.67 123.5964 90)
 			(effects
 				(font
@@ -5117,7 +4836,7 @@
 		(instances
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R3")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5580,7 +5299,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d103918f-f8f6-4876-adbb-1f3e05f1a639")
-		(property "Reference" "R4"
+		(property "Reference" "R2"
 			(at 153.67 136.2964 90)
 			(effects
 				(font
@@ -5632,7 +5351,7 @@
 		(instances
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R4")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -5706,6 +5425,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 95.25 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d461fd51-c4cb-461a-9678-972d9ea19918")
+		(property "Reference" "#PWR05"
+			(at 88.9 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.0844 90.1699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c14e6a7d-340f-471c-91b8-63eaa16eb864")
+		)
+		(instances
+			(project "CH552"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 144.78 138.43 0)
 		(unit 1)
@@ -5715,7 +5501,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5e4f939-a130-4276-8cab-486301b02237")
-		(property "Reference" "D3"
+		(property "Reference" "L2"
 			(at 143.1925 132.08 0)
 			(effects
 				(font
@@ -5767,7 +5553,7 @@
 		(instances
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "D3")
+					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -5782,7 +5568,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da126bae-cd60-4ebc-970a-02c6fb2e5d32")
-		(property "Reference" "R1"
+		(property "Reference" "R3"
 			(at 149.86 67.31 90)
 			(effects
 				(font
@@ -5834,7 +5620,7 @@
 		(instances
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R1")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -5990,7 +5776,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eecefcf3-159a-4b68-8c29-209701983978")
-		(property "Reference" "D2"
+		(property "Reference" "L1"
 			(at 143.1925 119.38 0)
 			(effects
 				(font
@@ -6042,7 +5828,7 @@
 		(instances
 			(project ""
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "D2")
+					(reference "L1")
 					(unit 1)
 				)
 			)
