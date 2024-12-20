@@ -4,8 +4,10 @@ Foro en chino: https://www.wch.cn/bbs
 
 Esta es una lista de proyectos relacionados que han servido para investigar:
 
+https://github.com/atc1441/CH559sdccUSBHost/
 https://github.com/Blinkinlabs/ch554_sdcc
 https://github.com/blueskull/CH552-JTAG/tree/main
+https://github.com/Cesarbautista10/ESE_CH552_Examples_C/tree/main
 https://github.com/DeqingSun/ch55xduino
 https://github.com/ElectronicCats/businessCard-ch55x/tree/main
 https://github.com/frank-zago/isp55e0
@@ -21,13 +23,17 @@ https://github.com/platunus/wch/tree/master
 https://github.com/rgwan/librech551/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
 https://github.com/semickolon/fak/tree/main
-https://github.com/SoCXin/CH552/blob/master/project/si5351/i2c.c
+https://github.com/SoCXin/CH552/tree/master
 https://github.com/wagiminator/CH552-MouseWiggler
 https://github.com/wagiminator/CH552-USB-Knob
 https://github.com/wagiminator/CH552-USB-NRF
+https://github.com/wagiminator/CH552-USB-OLED
 https://github.com/wagiminator/MCU-Flash-Tools/blob/main/chprog.py
+https://github.com/WeActStudio/WeActStudio.CH552CoreBoard
 https://github.com/zhuhuijia0001/usb-device-ch551/tree/master
 https://lang-ship.com/reference/unofficial/CH559_Doc_Japanese/en/docs/1-overview/
+https://learn.adafruit.com/adafruit-ch552-qt-py/arduino-ide-setup
+https://nerdralph.blogspot.com/2020/07/getting-started-with-wch-ch551-and-ch552.html
 https://www.electronicshub.org/basics-of-embedded-c-program/
 https://www.electronicwings.com/8051/introduction-to-8051-controller
 https://www.wch.cn/downloads/CH552EVT_ZIP.html
