@@ -37,3 +37,10 @@ https://nerdralph.blogspot.com/2020/07/getting-started-with-wch-ch551-and-ch552.
 https://www.electronicshub.org/basics-of-embedded-c-program/
 https://www.electronicwings.com/8051/introduction-to-8051-controller
 https://www.wch.cn/downloads/CH552EVT_ZIP.html
+
+# 8051 C
+
+https://circuitdigest.com/microcontroller-projects/digital-clock-using-8051-microcontroller
+https://exploreembedded.com/wiki/A6.8051_Interfacing:_RTC_DS1307
+https://exploreembedded.com/wiki/Interfacing_LCD_in_4-bit_mode_with_8051
+https://github.com/gurubrahmayya/Digital-clock-using-RTC-DS1307-8051/tree/master
