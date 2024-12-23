@@ -12,6 +12,13 @@ Una vez en modo bootloader, podrá verificar su estado listando los dispositivos
 lsusb
 ```
 
+Cómo en MAC OS X no tenemos el comando `lsusb` debemos usar otros comandos, como por ejemplo:
+
+system_profiler SPUSBDataType
+
+ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep -v '^Root.*'
+
+
 Si todo esta bien, deberá ver un PID y VID correspondiente a este `4348:55e0`. El nombre del device es WinChipHead BRCM20702 Hub
 
 Sino hay un prograna entra en el bootloader, al cabo de unos segundos sino se hace uso del bootloader, se inicia el programa en caso de que exista.

@@ -1,9 +1,17 @@
 # Flash
 
+
+https://github.com/ch32-rs/wchisp
+
+
+https://www.wch-ic.com/downloads/WCHISPTool_CMD_ZIP.html
+
+
 Para instalar la herramienta `chflasher` siga las siguientes instrucciones:
 
 ```bash
 git submodule update --init
+brew install libusb-compat
 python3 -m pip install --user pyusb pyserial
 ```
 

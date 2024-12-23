@@ -25,6 +25,16 @@ export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
 ```
 
+#### Troubleshooting
+
+Si al compular tienes el siguiente error, es que te falto hacer el `export` de las variables anteriores.
+
+```
+objcopy -I ihex -O binary blink.ihx blink.bin
+make: objcopy: No such file or directory
+make: *** [blink.bin] Error 1
+```
+
 ## Compiler
 
 ```
