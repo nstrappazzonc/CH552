@@ -25,7 +25,6 @@ https://github.com/pfalcon-mirrors/sdcc
 https://github.com/platunus/wch/tree/master
 https://github.com/rgwan/librech551/tree/master
 https://github.com/semickolon/fak/tree/main
-https://github.com/SoCXin/CH552/blob/master/project/jump_to_bl/jump_to_bl.c
 https://github.com/SoCXin/CH552/tree/master
 https://github.com/wagiminator/CH552-MouseWiggler
 https://github.com/wagiminator/CH552-USB-Knob
