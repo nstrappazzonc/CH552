@@ -8,6 +8,7 @@ https://github.com/atc1441/CH559sdccUSBHost/
 https://github.com/Blinkinlabs/ch554_sdcc
 https://github.com/blueskull/CH552-JTAG/tree/main
 https://github.com/Cesarbautista10/ESE_CH552_Examples_C/tree/main
+https://github.com/ch32-rs/wchisp
 https://github.com/cosmoois/CH552_PlatformIO_sample
 https://github.com/DeqingSun/ch55xduino
 https://github.com/doesntfazer/Ch55p34-keyboard
