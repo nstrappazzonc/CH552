@@ -1,10 +1,10 @@
 # Blink
 
-Este es un ejemplo simple de un blink, tambien se suele llamar flip flop, que hace uso del puerto P3.0  para enviar un voltaje de 5v y 0v.
+Este es un ejemplo simple de un blink (encendido y apagado con una pausa intermedia), tambien se suele llamar flip flop, que hace uso del puerto P3.0  para enviar un voltaje de 5v y 0v.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/src/blink/schematic.png?raw=true)
 
-En el codigo fuente mostramos dos formas de hacer lo mismo:
+En el código fuente mostramos dos formas de hacer lo mismo:
 
 ## Opción 1
 
