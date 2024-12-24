@@ -15,7 +15,7 @@ void main(void) {
   USBInit();
 
   while(1){
-    USBWriteString("Hello from CH552T with USB\n\r");
+    USBWriteString("Hello from CH552G with USB\n");
     delay(1000);
   }
 }
