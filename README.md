@@ -62,9 +62,8 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 Es una documentación básica de lo que necesitas para compilar y subir el firmware al MCU, el datasheet, enlaces de interés, y mucho más.
 
 - [SDCC (Small Devices C Compiler)](https://github.com/nstrappazzonc/CH552/blob/main/doc/sdcc.md) Explica como instalar y usar el compilador.
-- [chflasher](https://github.com/nstrappazzonc/CH552/blob/main/doc/flash.md) Script para subir el firmware al MCU.
 - [Bootloader](https://github.com/nstrappazzonc/CH552/blob/main/doc/flash.md) El MCU tiene un Bootloader que debemos saber como entrar para subir el firmware.
-- [Datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf).
+- [Datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf) Documentación técnica del fabricante.
 
 ## Proyectos relacionados
 

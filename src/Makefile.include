@@ -4,7 +4,7 @@
 CC = sdcc
 OBJCOPY = objcopy
 PACK_HEX = packihx
-WCHISP ?= ../../tools/chflasher/chflasher.py -w -s -f
+WCHISP ?= ../../tools/wchisp flash 
 
 #######################################################
 
