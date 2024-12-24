@@ -1,34 +1,41 @@
+#include <stdint.h>
 #include "eeprom.h"
 #include <ch552.h>
 
-// Write single byte to data flash
-void EEPROM_write(uint8_t addr, uint8_t value) {
-  if(addr < 128) {                      // max addr
-    SAFE_MOD    = 0x55;
-    SAFE_MOD    = 0xAA;                 // enter safe mode
-    GLOBAL_CFG |= bDATA_WE;             // enable data flash write
-    SAFE_MOD    = 0;                    // exit safe mode
-    ROM_ADDR_H  = DATA_FLASH_ADDR >> 8; // set address high byte
-    ROM_ADDR_L  = addr << 1;            // set address low byte (must be even)
-    ROM_DATA_L  = value;                // set value
-    if(ROM_STATUS & bROM_ADDR_OK)       // valid access address?
-      ROM_CTRL  = ROM_CMD_WRITE;        // write value to data flash
-    SAFE_MOD    = 0x55;
-    SAFE_MOD    = 0xAA;                 // enter safe mode
-    GLOBAL_CFG &= ~bDATA_WE;            // disable data flash write
-    SAFE_MOD    = 0;                    // exit safe mode
-  }
+uint8_t WriteDataFlash(uint8_t addr, unsigned char *buf, uint8_t len)
+{
+    uint8_t i;
+    SAFE_MOD = 0x55;
+    SAFE_MOD = 0xAA;                                                           //进入安全模式
+    GLOBAL_CFG |= bDATA_WE;                                                    //使能DataFlash写
+    SAFE_MOD = 0;                                                              //退出安全模式 
+    ROM_ADDR_H = DATA_FLASH_ADDR >> 8;
+    addr <<= 1;
+    for(i=0;i<len;i++)
+    {
+      ROM_ADDR_L = addr + i*2;
+      ROM_DATA_L = *(buf+i);      
+      if ( ROM_STATUS & bROM_ADDR_OK ) {                                     // 操作地址有效
+        ROM_CTRL = ROM_CMD_WRITE;                                           // 写入
+      }
+      if((ROM_STATUS ^ bROM_ADDR_OK) > 0) return i;                          // 返回状态,0x00=success,  0x02=unknown command(bROM_CMD_ERR)
+    }
+    SAFE_MOD = 0x55;
+    SAFE_MOD = 0xAA;                                                           //进入安全模式
+    GLOBAL_CFG &= ~bDATA_WE;                                                   //开启DataFlash写保护
+    SAFE_MOD = 0;                                                              //退出安全模式 
+    return i;   
 }
 
-// Read single byte from data flash
-uint8_t EEPROM_read(uint8_t addr) {
-  ROM_ADDR_H = DATA_FLASH_ADDR >> 8;    // set address high byte
-  ROM_ADDR_L = addr << 1;               // set address low byte (must be even)
-  ROM_CTRL   = ROM_CMD_READ;            // read value from data flash
-  return ROM_DATA_L;                    // return value
-}
-
-// Write single byte to data flash if changed (this reduces write cycles)
-void EEPROM_update(uint8_t addr, uint8_t value) {
-  if(EEPROM_read(addr) != value) EEPROM_write(addr, value);
+uint8_t ReadDataFlash(uint8_t addr, uint8_t len, unsigned char *buf)
+{
+    uint8_t i;
+    ROM_ADDR_H = DATA_FLASH_ADDR >> 8;
+    addr <<= 1;
+    for(i=0;i<len;i++){
+      ROM_ADDR_L = addr + i*2;                                                   //Addr必须为偶地址
+      ROM_CTRL = ROM_CMD_READ;
+      *(buf+i) = ROM_DATA_L;
+    }
+    return i;
 }

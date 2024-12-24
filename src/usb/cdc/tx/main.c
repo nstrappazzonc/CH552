@@ -14,8 +14,13 @@ void main(void) {
   init();
   USBInit();
 
+  int counter = 0;
+  char buffer[32];
+
   while(1){
-    USBWriteString("Hello from CH552G with USB\n");
+    sprintf(buffer, "%d - Hello from CH552G with USB\n", counter++);
+
+    USBWriteString(buffer);
     delay(1000);
   }
 }
