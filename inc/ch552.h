@@ -76,6 +76,31 @@ SFR16(UEP2_DMA, 0xE4); // UEP2_DMA_L and UEP2_DMA_H constitute a 16-bit SFR.
 #define GF0        0x04 // General flag bit 0. User-defined. Reset and set by software.
 #define PD         0x02 // Sleep mode enable. Sleep after set to 1. Automatically reset by hardware after wakeup.
 
+// FlashROM and Data-Flash Registers:
+// ----------------------------------
+SFR(GLOBAL_CFG, 0xB1);   // global config, Write@SafeMode:
+#define bBOOT_LOAD  0x20 // ReadOnly: boot loader status for discriminating BootLoader or Application: set 1 by power on reset, clear 0 by software reset.
+#define bSW_RESET   0x10 // software reset bit, auto clear by hardware.
+#define bCODE_WE    0x08 // enable flash-ROM (include code & Data-Flash) being program or erasing: 0=writing protect, 1=enable program and erase.
+#define bDATA_WE    0x04 // enable Data-Flash (flash-ROM data area) being program or erasing: 0=writing protect, 1=enable program and erase.
+#define bLDO3V3_OFF 0x02 // disable 5V->3.3V LDO: 0=enable LDO for USB and internal oscillator under 5V power, 1=disable LDO, V33 pin input external 3.3V power.
+#define bWDOG_EN    0x01 // enable watch-dog reset if watch-dog timer overflow: 0=as timer only, 1=enable reset if timer overflow.
+
+SFR16(ROM_ADDR, 0x84); // address for flash-ROM, little-endian
+SFR(ROM_ADDR_L, 0x84); // address low byte for flash-ROM
+SFR(ROM_ADDR_H, 0x85); // address high byte for flash-ROM
+SFR16(ROM_DATA, 0x8E); // data for flash-ROM writing, little-endian
+SFR(ROM_DATA_L, 0x8E); // data low byte for flash-ROM writing, data byte for Data-Flash reading/writing
+SFR(ROM_DATA_H, 0x8F); // data high byte for flash-ROM writing
+SFR(ROM_CTRL, 0x86);   // WriteOnly: flash-ROM control
+
+#define DATA_FLASH_ADDR 0xC000 // start address of Data-Flash.
+#define ROM_CMD_WRITE 0x9A     // WriteOnly: flash-ROM word or Data-Flash byte write operation command
+#define ROM_CMD_READ 0x8E      // WriteOnly: Data-Flash byte read operation command
+#define ROM_STATUS ROM_CTRL
+#define bROM_ADDR_OK 0x40      // ReadOnly: flash-ROM writing operation address valid flag, can be reviewed before or after operation: 0=invalid parameter, 1=address valid
+#define bROM_CMD_ERR 0x02      // ReadOnly: flash-ROM operation command error flag: 0=command accepted, 1=unknown command
+
 // Interrupt Enable Register (IE):
 // -------------------------------
 SBIT(EA,    0xA8, 7); // Enable global interrupts: 0=disable, 1=enable if E_DIS=0.
@@ -410,14 +435,14 @@ SBIT(bPWM_CLR_ALL, 0x9D, 1); // Empty PWM1 and PWM2 counts and FIFO.
 #define UIS_TOKEN_SETUP   0x30
 #define MASK_USB_ADDR     0x7F
 SFR(USB_INT_FG, 0xD8);  // USB interrupt flag
-   SBIT(U_IS_NAK, 0xD8, 7); // ReadOnly: indicate current USB transfer is NAK received
-   SBIT(U_TOG_OK, 0xD8, 6); // ReadOnly: indicate current USB transfer toggle is OK
-   SBIT(U_SIE_FREE, 0xD8, 5); // ReadOnly: indicate USB SIE free status
+   SBIT(U_IS_NAK, 0xD8, 7);     // ReadOnly: indicate current USB transfer is NAK received
+   SBIT(U_TOG_OK, 0xD8, 6);     // ReadOnly: indicate current USB transfer toggle is OK
+   SBIT(U_SIE_FREE, 0xD8, 5);   // ReadOnly: indicate USB SIE free status
    SBIT(UIF_FIFO_OV,  0xD8, 4); // FIFO overflow interrupt flag for USB, direct bit address clear or write 1 to clear
    SBIT(UIF_HST_SOF,  0xD8, 3); // host SOF timer interrupt flag for USB host, direct bit address clear or write 1 to clear
    SBIT(UIF_SUSPEND,  0xD8, 2); // USB suspend or resume event interrupt flag, direct bit address clear or write 1 to clear
    SBIT(UIF_TRANSFER, 0xD8, 1); // USB transfer completion interrupt flag, direct bit address clear or write 1 to clear
-   SBIT(UIF_DETECT, 0xD8, 0); // device detected event interrupt flag for USB host mode, direct bit address clear or write 1 to clear
+   SBIT(UIF_DETECT, 0xD8, 0);   // device detected event interrupt flag for USB host mode, direct bit address clear or write 1 to clear
    SBIT(UIF_BUS_RST,  0xD8, 0); // bus reset event interrupt flag for USB device mode, direct bit address clear or write 1 to clear
 
 SFR(USB_MIS_ST, 0xDA);  // ReadOnly: USB miscellaneous status
