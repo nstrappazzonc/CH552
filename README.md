@@ -47,7 +47,7 @@ En el protoboard nos queda de la siguiente forma:
 
 ## Códigos fuentes
 
-En este repositorio tiene una colección de códigos fuentes de ejemplos escrito en C para empezar. Todos los códigos fuentes han sido previamente verificados para garantizar su correcto funcionamiento.
+En este repositorio tiene una colección de códigos fuentes de ejemplos escritos en C para empezar. Todos los códigos fuentes listados aquí han sido previamente verificados para garantizar su correcto funcionamiento.
 
 - [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Usa un puerto de salida para encender y apaga un LED.
 - [bootloader](https://github.com/nstrappazzonc/CH552/tree/main/src/bootloader) Fuerza al MCU entrar al modo bootloader por defecto.
@@ -71,3 +71,8 @@ Es una documentación básica de lo que necesitas para compilar y subir el firmw
 - [CH334 - HUB USB 2.0](https://github.com/nstrappazzonc/CH334)
 - [CH340 - USB 2.0 to Serial](https://github.com/nstrappazzonc/CH340)
 - [CH9141 - Bluetooth Serial Transparent](https://github.com/nstrappazzonc/CH9141)
+
+## Proyectos de terceros
+
+- [English Docs for CH559 Microcontroller](https://kprasadvnsi.github.io/CH559_Doc_English)
+- [Small Devices Arduino for ch55x devices](https://github.com/DeqingSun/ch55xduino)
