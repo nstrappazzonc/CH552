@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include "eeprom.h"
+#include "data_flash.h"
 #include <ch552.h>
 
 uint8_t WriteDataFlash(uint8_t addr, unsigned char *buf, uint8_t len)

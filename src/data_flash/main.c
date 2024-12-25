@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include <ch552.h>
-#include <eeprom.h>
+#include <data_flash.h>
 #include <string.h>
 #include <utils.h>
 
