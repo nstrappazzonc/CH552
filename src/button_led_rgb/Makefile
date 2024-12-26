@@ -1,4 +1,4 @@
-TARGET = data_flash
+TARGET = button_led_rgb
 
 C_FILES = \
 	main.c \

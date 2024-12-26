@@ -344,6 +344,12 @@ SBIT(P35, 0xB0, 5); // P3.5
 SBIT(P36, 0xB0, 6); // P3.6
 SBIT(P37, 0xB0, 7); // P3.7
 
+/*  Interrupt Registers  */
+#define bIE_P1_5_LO       0x20      // enable interrupt by pin P1.5 low level / falling edge
+#define bIE_P1_4_LO       0x10      // enable interrupt by pin P1.4 low level / falling edge
+#define bIE_P1_3_LO       0x08      // enable interrupt by pin P1.3 low level / falling edge
+#define bIE_P3_1_LO       0x02      // enable interrupt by pin P3.1 low level / falling edge
+
 // Port alias:
 // -----------
 #define bAIN0 0x02 // P1.1: AIN0 for ADC
