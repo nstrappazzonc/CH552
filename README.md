@@ -47,7 +47,7 @@ En el protoboard nos queda de la siguiente forma:
 
 ## Códigos fuentes
 
-En este repositorio tiene una colección de códigos fuentes de ejemplos escritos en C para empezar. Todos los códigos fuentes listados aquí han sido previamente verificados para garantizar su correcto funcionamiento.
+En este repositorio tiene una colección de códigos fuentes de ejemplos escritos en C para empezar. Todos los ejemplos listados han sido previamente verificados para garantizar su correcto funcionamiento.
 
 - [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Usa un puerto de salida para encender y apaga un LED.
 - [bootloader](https://github.com/nstrappazzonc/CH552/tree/main/src/bootloader) Fuerza al MCU entrar al modo bootloader por defecto.
