@@ -25,7 +25,7 @@ Estas son las especificaciones más relevantes del MCU, para más detalles vea l
 
 El pinout que mostramos es básico para hacerse una idea, hay más funcionalidades en los puertos. Revisar el [datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf?raw=true) para mayor detalle.
 
-**IMPORTANTE:** Se debe destacar que hay una limitación con la ROM o el Code Flash es un proceso iFlash™, el cual puede ser programado unas 200 veces. No es tan malo, pero debe tenerlo en cuenta.
+**IMPORTANTE:** Se debe destacar que hay una limitación con la ROM o el Code Flash es un proceso iFlash™, el cual puede ser programado alrededor de 10,000 veces antes de que la memoria Flash pueda empezar a deteriorarse o fallar. Sin embargo, este valor puede variar ligeramente dependiendo de factores como la temperatura de operación y el manejo adecuado de los ciclos de escritura.
 
 ## Componentes
 
