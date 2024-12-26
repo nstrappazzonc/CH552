@@ -52,7 +52,7 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Usa un puerto de salida para encender y apaga un LED.
 - [bootloader](https://github.com/nstrappazzonc/CH552/tree/main/src/bootloader) Fuerza al MCU entrar al modo bootloader por defecto.
 - [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Usa un puerto de una entrada para un pulsador y otro puerto de salida para el LED.
-- [button & led rgb](https://github.com/nstrappazzonc/CH552/tree/main/src/button_led_rgb) Permite interactuar con un pulsador y un LED RGB para que cambie de color cada vez que es presionado.
+- [button & led rgb](https://github.com/nstrappazzonc/CH552/tree/main/src/button_led_rgb) Interactuar con un pulsador y un LED RGB para cambiar de color.
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
 - [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
