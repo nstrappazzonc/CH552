@@ -2,8 +2,10 @@
 #include <ch552.h>
 
 void init(void) {
+    // Set to low all pins P1.x and P3.x:
+    P1 = 0;
+    P3 = 0;
 
-    
     // Set internal oscilator:
     SAFE_MOD = 0x55;
     SAFE_MOD = 0xAA;

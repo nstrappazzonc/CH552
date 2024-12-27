@@ -101,6 +101,18 @@ SFR(ROM_CTRL, 0x86);   // WriteOnly: flash-ROM control
 #define bROM_ADDR_OK 0x40      // ReadOnly: flash-ROM writing operation address valid flag, can be reviewed before or after operation: 0=invalid parameter, 1=address valid
 #define bROM_CMD_ERR 0x02      // ReadOnly: flash-ROM operation command error flag: 0=command accepted, 1=unknown command
 
+// Interrupt Registers:
+// --------------------
+SFR(GPIO_IE, 0xC7);      // GPIO interrupt enable:
+#define bIE_IO_EDGE 0x80 // enable GPIO edge interrupt: 0=low/high level, 1=falling/rising edge.
+#define bIE_RXD1_LO 0x40 // enable interrupt by RXD1 low level / falling edge.
+#define bIE_P1_5_LO 0x20 // enable interrupt by pin P1.5 low level / falling edge.
+#define bIE_P1_4_LO 0x10 // enable interrupt by pin P1.4 low level / falling edge.
+#define bIE_P1_3_LO 0x08 // enable interrupt by pin P1.3 low level / falling edge.
+#define bIE_RST_HI  0x04 // enable interrupt by pin RST high level / rising edge.
+#define bIE_P3_1_LO 0x02 // enable interrupt by pin P3.1 low level / falling edge.
+#define bIE_RXD0_LO 0x01 // enable interrupt by RXD0 low level / falling edge.
+
 // Interrupt Enable Register (IE):
 // -------------------------------
 SBIT(EA,    0xA8, 7); // Enable global interrupts: 0=disable, 1=enable if E_DIS=0.
@@ -343,12 +355,6 @@ SBIT(P34, 0xB0, 4); // P3.4
 SBIT(P35, 0xB0, 5); // P3.5
 SBIT(P36, 0xB0, 6); // P3.6
 SBIT(P37, 0xB0, 7); // P3.7
-
-/*  Interrupt Registers  */
-#define bIE_P1_5_LO       0x20      // enable interrupt by pin P1.5 low level / falling edge
-#define bIE_P1_4_LO       0x10      // enable interrupt by pin P1.4 low level / falling edge
-#define bIE_P1_3_LO       0x08      // enable interrupt by pin P1.3 low level / falling edge
-#define bIE_P3_1_LO       0x02      // enable interrupt by pin P3.1 low level / falling edge
 
 // Port alias:
 // -----------
