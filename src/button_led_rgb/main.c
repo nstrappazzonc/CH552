@@ -11,10 +11,6 @@ void main(void) {
 
     uint8_t color;
 
-    RED   = 0;
-    GREEN = 0;
-    BLUE  = 0;
-
     //Set input in pullup mode:
     P3_MOD_OC |= (1<<BUTTON);
     P3_DIR_PU |= (1<<BUTTON);
