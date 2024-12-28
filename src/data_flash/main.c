@@ -42,12 +42,7 @@ uint8_t ReadDataFlash(uint8_t Addr,uint8_t len,unsigned char *buf) {
     return i;
 }
 
-void main(void) {
-    init();
-
-    uint8_t color;
-
-    ReadDataFlash(1, 1, &color);
+void setColor(uint8_t color) {
     switch(color) {
         case 1:
             RED = 1;
@@ -61,6 +56,15 @@ void main(void) {
         default:
             break;
     }
+}
+
+void main(void) {
+    init();
+
+    uint8_t color;
+
+    ReadDataFlash(1, 1, &color);
+    setColor(color);
 
     //Set input in pullup mode:
     P3_MOD_OC |= (1<<BUTTON);
@@ -82,19 +86,7 @@ void main(void) {
                 GREEN = 0;
                 BLUE  = 0;
 
-                switch(color) {
-                    case 1:
-                        RED = 1;
-                        break;
-                    case 2:
-                        GREEN = 1;
-                        break;
-                    case 3:
-                        BLUE = 1;
-                        break;
-                    default:
-                        break;
-                }
+                setColor(color);
 
                 while(BUTTON);
             }

@@ -28,6 +28,7 @@ https://github.com/rgwan/librech551/tree/master
 https://github.com/semickolon/fak/tree/main
 https://github.com/SoCXin/CH552/blob/master/src/examples/DataFlash/Main.C
 https://github.com/SoCXin/CH552/tree/master
+https://github.com/UNIT-Electronics/OLED_ch552
 https://github.com/wagiminator/CH552-MouseWiggler
 https://github.com/wagiminator/CH552-USB-Knob
 https://github.com/wagiminator/CH552-USB-NRF
@@ -46,6 +47,7 @@ https://www.wch.cn/downloads/CH552EVT_ZIP.html
 https://circuitdigest.com/microcontroller-projects/digital-clock-using-8051-microcontroller
 https://exploreembedded.com/wiki/A6.8051_Interfacing:_RTC_DS1307
 https://exploreembedded.com/wiki/Interfacing_LCD_in_4-bit_mode_with_8051
+https://exploreembedded.com/wiki/OLED_Interface_With_8051
 https://github.com/gurubrahmayya/Digital-clock-using-RTC-DS1307-8051/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
 https://www.electronicshub.org/basics-of-embedded-c-program/
