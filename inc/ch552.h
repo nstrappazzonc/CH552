@@ -9,9 +9,10 @@
 #ifndef __CH552_H__
 #define __CH552_H__
 
+#pragma once
 #include <compiler.h>
 
-#define FREQ_SYS 24000000 // Default clock frequency.
+#define F_CPU 24000000 // Default clock frequency.
 
 // Registers:
 // ----------
@@ -60,6 +61,38 @@ SFR(USB_RX_LEN, 0xDB); // USB reception length register (read only).
 SFR16(UEP0_DMA, 0xEC); // UEP0_DMA_L and UEP0_DMA_H constitute a 16-bit SFR.
 SFR16(UEP1_DMA, 0xEE); // UEP1_DMA_L and UEP1_DMA_H constitute a 16-bit SFR.
 SFR16(UEP2_DMA, 0xE4); // UEP2_DMA_L and UEP2_DMA_H constitute a 16-bit SFR.
+
+// System Registers:
+// -----------------
+SFR(PSW,  0xD0);    // program status word
+SBIT(CY,  0xD0, 7); // carry flag
+SBIT(AC,  0xD0, 6); // auxiliary carry flag
+SBIT(F0,  0xD0, 5); // bit addressable general purpose flag 0
+SBIT(RS1, 0xD0, 4); // register R0-R7 bank selection high bit
+SBIT(RS0, 0xD0, 3); // register R0-R7 bank selection low bit
+#define MASK_PSW_RS 0x18 // bit mask of register R0-R7 bank selection
+// RS1 & RS0: register R0-R7 bank selection
+//    00 - bank 0, R0-R7 @ address 0x00-0x07
+//    01 - bank 1, R0-R7 @ address 0x08-0x0F
+//    10 - bank 2, R0-R7 @ address 0x10-0x17
+//    11 - bank 3, R0-R7 @ address 0x18-0x1F
+   SBIT(OV, 0xD0, 2);   // overflow flag
+   SBIT(F1, 0xD0, 1);   // bit addressable general purpose flag 1
+   SBIT(P,  0xD0, 0);   // ReadOnly: parity flag
+SFR(ACC,    0xE0);  // accumulator
+SFR(B,  0xF0);  // general purpose register B
+SFR(SP, 0x81);  // stack pointer
+SFR(DPL,    0x82);  // data pointer low
+SFR(DPH,    0x83);  // data pointer high
+SFR(SAFE_MOD,   0xA1);  // WriteOnly: writing safe mode
+#define CHIP_ID SAFE_MOD
+SFR(GLOBAL_CFG, 0xB1);              // global config, Write@SafeMode
+#define bBOOT_LOAD        0x20      // ReadOnly: boot loader status for discriminating BootLoader or Application: set 1 by power on reset, clear 0 by software reset
+#define bSW_RESET         0x10      // software reset bit, auto clear by hardware
+#define bCODE_WE          0x08      // enable flash-ROM (include code & Data-Flash) being program or erasing: 0=writing protect, 1=enable program and erase
+#define bDATA_WE          0x04      // enable Data-Flash (flash-ROM data area) being program or erasing: 0=writing protect, 1=enable program and erase
+#define bLDO3V3_OFF       0x02      // disable 5V->3.3V LDO: 0=enable LDO for USB and internal oscillator under 5V power, 1=disable LDO, V33 pin input external 3.3V power
+#define bWDOG_EN          0x01      // enable watch-dog reset if watch-dog timer overflow: 0=as timer only, 1=enable reset if timer overflow
 
 // Interrupt routine address and interrupt number:
 // -----------------------------------------------
@@ -336,25 +369,25 @@ SBIT(CP_RL2, 0xC8, 0); // Timer2 function selection bit. This bit should be forc
 
 // Port number 1:
 // --------------
-SBIT(P10, 0x90, 0); // P1.0
-SBIT(P11, 0x90, 1); // P1.1
-SBIT(P12, 0x90, 2); // P1.2
-SBIT(P13, 0x90, 3); // P1.3
-SBIT(P14, 0x90, 4); // P1.4
-SBIT(P15, 0x90, 5); // P1.5
-SBIT(P16, 0x90, 6); // P1.6
-SBIT(P17, 0x90, 7); // P1.7
+// SBIT(P10, 0x90, 0); // P1.0
+// SBIT(P11, 0x90, 1); // P1.1
+// SBIT(P12, 0x90, 2); // P1.2
+// SBIT(P13, 0x90, 3); // P1.3
+// SBIT(P14, 0x90, 4); // P1.4
+// SBIT(P15, 0x90, 5); // P1.5
+// SBIT(P16, 0x90, 6); // P1.6
+// SBIT(P17, 0x90, 7); // P1.7
 
 // Port number 3:
 // --------------
-SBIT(P30, 0xB0, 0); // P3.0
-SBIT(P31, 0xB0, 1); // P3.1
-SBIT(P32, 0xB0, 2); // P3.2
-SBIT(P33, 0xB0, 3); // P3.3
-SBIT(P34, 0xB0, 4); // P3.4
-SBIT(P35, 0xB0, 5); // P3.5
-SBIT(P36, 0xB0, 6); // P3.6
-SBIT(P37, 0xB0, 7); // P3.7
+// SBIT(P30, 0xB0, 0); // P3.0
+// SBIT(P31, 0xB0, 1); // P3.1
+// SBIT(P32, 0xB0, 2); // P3.2
+// SBIT(P33, 0xB0, 3); // P3.3
+// SBIT(P34, 0xB0, 4); // P3.4
+// SBIT(P35, 0xB0, 5); // P3.5
+// SBIT(P36, 0xB0, 6); // P3.6
+// SBIT(P37, 0xB0, 7); // P3.7
 
 // Port alias:
 // -----------
