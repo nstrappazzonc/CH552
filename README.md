@@ -4,7 +4,7 @@ Este es un facinante, repotenciado y bien dotado MCU de 8-bit de muy bajo coste 
 
 Puedes conseguir los MCU en la tienda oficial de [AliExpress](https://wchofficialstore.es.aliexpress.com/store/1100367542) o en [LCSC](https://www.lcsc.com).
 
-![](https://github.com/nstrappazzonc/CH552/blob/main/img/system_block_diagram.png?raw=true)
+![](https://github.com/nstrappazzonc/CH552/blob/main/assets/system_block_diagram.png?raw=true)
 
 Por ejemplo, un MCU de la familia AT89LP51 que tiene menos prestaciones tiene un coste x3 en comparación a la familia CH55X. Obviamente la comunidad para el soporte de Microchip es muy grande y varoable a comparación a la de WCH, lo importante es que la documentación oficial sea buena y la arquitectura la misma, y con algo de paciencia se pueden lograr cosas.
 
@@ -21,7 +21,7 @@ Estas son las especificaciones más relevantes del MCU, para más detalles vea l
 - Incorpora un identificador numerico único.
 - Encapsulados disponibles: TSSOP-20, SOP-16, MSOP-10.
 
-![](https://github.com/nstrappazzonc/CH552/blob/main/img/pinout2.png?raw=true)
+![](https://github.com/nstrappazzonc/CH552/blob/main/assets/pinout2.png?raw=true)
 
 El pinout que mostramos es básico para hacerse una idea, hay más funcionalidades en los puertos. Revisar el [datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf?raw=true) para mayor detalle.
 
@@ -39,11 +39,11 @@ Use los siguientes componentes para construir el circuito mínimo:
 
 ## Esquema mínimo
 
-![](https://github.com/nstrappazzonc/CH552/blob/main/img/minimal_schematic.jpg?raw=true)
+![](https://github.com/nstrappazzonc/CH552/blob/main/assets/minimal_schematic.jpg?raw=true)
 
 En el protoboard nos queda de la siguiente forma:
 
-![](https://github.com/nstrappazzonc/CH552/blob/main/img/minimal_protoboard.jpg?raw=true)
+![](https://github.com/nstrappazzonc/CH552/blob/main/assets/minimal_protoboard.jpg?raw=true)
 
 ## Códigos fuentes
 
