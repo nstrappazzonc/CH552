@@ -2558,22 +2558,10 @@
 		(uuid "4f25fc5f-c1b9-45c9-942d-ed6925ecbbf0")
 	)
 	(junction
-		(at 118.11 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f72c12e-d87a-41db-b697-24bb75d1d85d")
-	)
-	(junction
 		(at 91.44 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "64f07e6e-7ba5-4643-acda-e4f4d687da0a")
-	)
-	(junction
-		(at 127 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "80152bf6-027c-4f07-b7b7-7d7a987cda70")
 	)
 	(junction
 		(at 95.25 102.87)
@@ -2667,16 +2655,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 85.09) (xy 129.54 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bed2678-003d-4c68-9114-01cc714f6ebf")
-	)
-	(wire
-		(pts
 			(xy 91.44 85.09) (xy 100.33 85.09)
 		)
 		(stroke
@@ -2747,16 +2725,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 69.85) (xy 127 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f68637f-5721-4510-bd07-50c2c1c0563d")
-	)
-	(wire
-		(pts
 			(xy 95.25 102.87) (xy 124.46 102.87)
 		)
 		(stroke
@@ -2784,16 +2752,6 @@
 			(type default)
 		)
 		(uuid "5b5649c3-1d9c-452e-9a56-7f6f7fe7d66b")
-	)
-	(wire
-		(pts
-			(xy 127 77.47) (xy 127 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60c7b4ff-d119-486e-8aab-7d3e874a60da")
 	)
 	(wire
 		(pts
@@ -2857,7 +2815,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 85.09) (xy 127 85.09)
+			(xy 118.11 85.09) (xy 129.54 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3074,16 +3032,6 @@
 			(type default)
 		)
 		(uuid "d2eb7611-3923-4a2b-845e-707a664312b4")
-	)
-	(wire
-		(pts
-			(xy 127 62.23) (xy 118.11 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3f6cb03-0fc5-4e3b-b83b-c21c70b41e90")
 	)
 	(wire
 		(pts
@@ -5477,76 +5425,6 @@
 			(project "CH552"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 127 73.66 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a8389236-9541-4ffd-bfa3-e524842fd52e")
-		(property "Reference" "C4"
-			(at 125.73 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100nF"
-			(at 130.81 71.12 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Library:C1206"
-			(at 126.0348 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 127 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "39bb7ec4-fac9-4906-a15c-ee0cb8818ee1")
-		)
-		(pin "2"
-			(uuid "e4d78bbb-db95-40f5-bce3-31aec705398d")
-		)
-		(instances
-			(project "CH552"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "C4")
 					(unit 1)
 				)
 			)
