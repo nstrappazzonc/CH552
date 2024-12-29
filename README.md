@@ -55,6 +55,7 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [button & led rgb](https://github.com/nstrappazzonc/CH552/tree/main/src/button_led_rgb) Interactuar con un pulsador y un LED RGB para cambiar de color.
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
+- [data flash](https://github.com/nstrappazzonc/CH552/tree/main/src/data_flash) Grababa en una memoria persistente el último estado.
 - [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
 
