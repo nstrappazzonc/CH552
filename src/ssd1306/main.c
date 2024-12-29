@@ -183,13 +183,12 @@ void OLED_println(char* str) {
 
 void main(void) {
     init();
-    OLED_init();                            // init OLED
 
+    OLED_init();
     OLED_print("* CH552 with OLED   *");
     OLED_print("---------------------");
-    OLED_print("Matias Strappaazzon\n");
+    OLED_print("Nicola Strappaazzon\n");
     OLED_print("\n");
-    OLED_print("Version: 100\n");
 
     while(1) {}
 }
