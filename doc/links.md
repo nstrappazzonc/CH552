@@ -52,3 +52,8 @@ https://github.com/gurubrahmayya/Digital-clock-using-RTC-DS1307-8051/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
 https://www.electronicshub.org/basics-of-embedded-c-program/
 https://www.electronicwings.com/8051/introduction-to-8051-controller
+
+# Arduino
+
+https://github.com/robsoncouto/arduino-songs
+https://github.com/hibit-dev/buzzer
