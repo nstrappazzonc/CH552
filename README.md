@@ -31,7 +31,7 @@ El pinout que mostramos es básico para hacerse una idea, hay más funcionalidad
 
 Use los siguientes componentes para construir el circuito mínimo:
 
-- Un IC CH552G.
+- Un microcontrolador CH552G.
 - Condensador de 100nF x2.
 - Resistencia de 10K x2.
 - Resistencia de 1K x2.
