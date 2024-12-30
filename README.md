@@ -75,5 +75,6 @@ Es una documentación básica de lo que necesitas para compilar y subir el firmw
 
 ## Proyectos de terceros
 
+- [Adafruit CH552 QT Py](https://learn.adafruit.com/adafruit-ch552-qt-py/overview)
 - [English Docs for CH559 Microcontroller](https://kprasadvnsi.github.io/CH559_Doc_English)
 - [Small Devices Arduino for ch55x devices](https://github.com/DeqingSun/ch55xduino)
