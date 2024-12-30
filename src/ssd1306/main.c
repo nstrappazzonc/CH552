@@ -248,12 +248,6 @@ void OLED_print(char* str) {
   while(*str) OLED_write(*str++);
 }
 
-// OLED print string with newline
-void OLED_println(char* str) {
-  OLED_print(str);
-  OLED_write('\n');
-}
-
 void main(void) {
     init();
 
