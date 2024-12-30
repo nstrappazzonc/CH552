@@ -57,7 +57,7 @@ En este repositorio tiene una colección de códigos fuentes de ejemplos escrito
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
 - [data flash](https://github.com/nstrappazzonc/CH552/tree/main/src/data_flash) Grababa en una memoria persistente el último estado.
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
-- [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Uso simple de un modulo OLED con I2C.
+- [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Uso simple de un módulo OLED con I2C.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
 
 ## Documentación
