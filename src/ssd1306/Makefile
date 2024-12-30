@@ -1,9 +1,10 @@
-TARGET = fade
+TARGET = oled
 
 C_FILES = \
 	main.c \
 	../../inc/utils.c \
-	../../inc/i2c.c
+	../../inc/i2c.c \
+	../../inc/oled.c
 
 pre-flash:
 
