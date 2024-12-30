@@ -68,6 +68,8 @@
 void I2C_init(void) {
   PIN_output_OD(PIN_SDA);                   // set SDA pin to open-drain OUTPUT
   PIN_output_OD(PIN_SCL);                   // set SCL pin to open-drain OUTPUT
+  PIN_high(PIN_SDA);
+  PIN_high(PIN_SCL);
 }
 
 // I2C transmit one data byte to the slave, ignore ACK bit, no clock stretching allowed
