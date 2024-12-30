@@ -4,6 +4,6 @@ En este ejemplo hacemos uso de una pantalla [monocromática OLED de 0,96](https:
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/ssd1306/protoboard.jpeg)
 
-
+La conexión del microcontrolador con la pantalla OLED es muy simple por la interfaz I2C, recuerde que el microcontrolador CH552 no tiene registros dedicados para I2C y se hace emulando, por lo que puede realizar la conexión en cualquier pin disponible.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/ssd1306/schematic.png)
