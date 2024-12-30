@@ -49,14 +49,15 @@ En el protoboard nos queda de la siguiente forma:
 
 En este repositorio tiene una colección de códigos fuentes de ejemplos escritos en C para empezar. Todos los ejemplos listados han sido previamente verificados para garantizar su correcto funcionamiento.
 
+- [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
 - [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Usa un puerto de salida para encender y apaga un LED.
 - [bootloader](https://github.com/nstrappazzonc/CH552/tree/main/src/bootloader) Fuerza al MCU entrar al modo bootloader por defecto.
-- [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Usa un puerto de una entrada para un pulsador y otro puerto de salida para el LED.
 - [button & led rgb](https://github.com/nstrappazzonc/CH552/tree/main/src/button_led_rgb) Interactuar con un pulsador y un LED RGB para cambiar de color.
-- [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
+- [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Usa un puerto de una entrada para un pulsador y otro puerto de salida para el LED.
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
 - [data flash](https://github.com/nstrappazzonc/CH552/tree/main/src/data_flash) Grababa en una memoria persistente el último estado.
-- [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
+- [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
+- [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Uso simple de un modulo OLED con I2C.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
 
 ## Documentación
