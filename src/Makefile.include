@@ -13,10 +13,15 @@ XRAM_LOC  = 0x0100
 XRAM_SIZE = 0x0300
 CODE_SIZE = 0x3800
 ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-CFLAGS   := -V -mmcs51 --model-small --no-xinit-opt \
-	--xram-size $(XRAM_SIZE) --xram-loc $(XRAM_LOC) \
+CFLAGS   := -mmcs51 \
+	--no-xinit-opt \
+	--xram-size $(XRAM_SIZE) \
+	--xram-loc $(XRAM_LOC) \
+	--opt-code-size \
+	--model-small \
 	--code-size $(CODE_SIZE) \
-	-I$(ROOT_DIR)../inc -I. -DF_CPU=$(FREQ_SYS)
+	-I$(ROOT_DIR)../inc -I. \
+	-DF_CPU=$(FREQ_SYS)
 
 LFLAGS := $(CFLAGS)
 RELS := $(C_FILES:.c=.rel)
