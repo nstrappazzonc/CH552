@@ -1,5 +1,5 @@
-#ifndef OLED_h
-#define OLED_h
+#ifndef SSD1306_h
+#define SSD1306_h
 
 #pragma once
 #include <stdint.h>

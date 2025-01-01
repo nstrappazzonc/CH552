@@ -1,10 +1,10 @@
-TARGET = oled
+TARGET = ssd1306
 
 C_FILES = \
 	main.c \
 	../../inc/utils.c \
 	../../inc/i2c.c \
-	../../inc/oled.c
+	../../inc/ssd1306.c
 
 pre-flash:
 

@@ -1,6 +1,6 @@
 #include <ch552.h>
 #include <utils.h>
-#include <oled.h>
+#include <ssd1306.h>
 
 void main(void) {
     init();
