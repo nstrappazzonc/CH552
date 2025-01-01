@@ -7,7 +7,7 @@
 
 void main(void) {
     rtc_t rtc;
-    unsigned char buffer[8];
+    unsigned char buffer[13];
 
     init();
     oled_init();
@@ -15,13 +15,9 @@ void main(void) {
 
     while(1) {
         rtc_get(&rtc);
-        sprintf(buffer, "%02x:%02x:%02x", rtc.hour, rtc.minute, rtc.second);
-        // oled_clear();
+        sprintf(buffer, "  %02x/%02x/%02x %02x:%02x:%02x", rtc.year, rtc.month, rtc.date, rtc.hour, rtc.minute, rtc.second);
         oled_set_cursor(3, 0);
-        oled_print("Time: ");
         oled_print(buffer);
-        oled_print("\n");
-        oled_print("Test...");
         delay(1000);
     }
 }
