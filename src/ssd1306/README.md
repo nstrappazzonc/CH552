@@ -10,4 +10,4 @@ La conexión del microcontrolador con la pantalla OLED es muy simple por la inte
 
 El diagrama esquemático mostrado anteriormente es una representación simple que pretende mostrar la conexión de la pantalla OLED al MCU, el circuito necesario para que funcione el MCU es ignorado intencionalmente.
 
-Hay una técnica del `screen_buffer` que se utiliza para dibujar en la pantalla, si nuestra pantalla es de 128x64 píxel, se necesita que la variable `screen_buffer` ocupará 128x64=8192 bytes, lamentablemente el CH552 tiene una RAM de 256 bytes por lo que no podemos utilizar dicha técnica.
+Hay una técnica del `screen_buffer` que se utiliza para dibujar en la pantalla, si nuestra pantalla es de 128x64 píxel, al definir la variable `screen_buffer` ocupará 128x64=8192 bytes, lamentablemente el CH552 tiene una RAM de 256 bytes por lo que no podemos utilizar dicha técnica.
