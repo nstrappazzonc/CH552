@@ -219,8 +219,20 @@ void oled_print(char* str) {
   while(*str) oled_write(*str++);
 }
 
-void oled_set_position(uint8_t l, uint8_t c) {
-  line = scroll = 0;
-  column = 0;
-  oled_set_line(1);
+void oled_set_cursor(uint8_t l, uint8_t c) {
+  line = l;
+  column = c;
+
+  oled_set_line(l);
+
+  // oled_send_command(SSD1306_SET_COLUMN_ADDR);
+  // oled_send_command(column);
+  // oled_send_command(127);
+
+  // oled_send_command(SSD1306_SET_PAGE_ADDR);
+  // oled_send_command(line);
+  // oled_send_command(0x07);
+
+  // I2C_start(OLED_ADDR);
+  // I2C_write(OLED_DAT_MODE);
 }
