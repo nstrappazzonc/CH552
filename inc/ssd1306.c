@@ -112,6 +112,8 @@ __code uint8_t OLED_FONT[][5] = {
 
 // Set cursor to line start
 void oled_set_line(uint8_t line) {
+  column = 0;
+
   I2C_start(OLED_ADDR);        // start transmission to OLED
   I2C_write(OLED_COMMAND);     // set command mode
   I2C_write(OLED_PAGE + line); // set line
@@ -217,22 +219,4 @@ void oled_write(char c) {
 // Print string
 void oled_print(char* str) {
   while(*str) oled_write(*str++);
-}
-
-void oled_set_cursor(uint8_t l, uint8_t c) {
-  line = l;
-  column = c;
-
-  oled_set_line(l);
-
-  // oled_send_command(SSD1306_SET_COLUMN_ADDR);
-  // oled_send_command(column);
-  // oled_send_command(127);
-
-  // oled_send_command(SSD1306_SET_PAGE_ADDR);
-  // oled_send_command(line);
-  // oled_send_command(0x07);
-
-  // I2C_start(OLED_ADDR);
-  // I2C_write(OLED_DAT_MODE);
 }

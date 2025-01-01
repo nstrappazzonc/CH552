@@ -27,6 +27,6 @@ void oled_init(void);
 void oled_clear(void);
 void oled_write(char c);
 void oled_print(char* str);
-void oled_set_cursor(uint8_t, uint8_t);
+void oled_set_line(uint8_t);
 
 #endif
