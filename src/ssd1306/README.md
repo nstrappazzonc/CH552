@@ -8,4 +8,4 @@ La conexión del microcontrolador con la pantalla OLED es muy simple por la inte
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/ssd1306/schematic.png)
 
-Hay una técnica del `screen_buffer` que se utiliza para dibujar en la pantalla, si nuestra pantalla es de 128x64 píxel, se necesita que la variable `screen_buffer` ocupará 128x64=8192 bytes, y en el CH552 la RAM es de 256 bytes por lo que no podemos utilizar dicha técnica.
+Hay una técnica del `screen_buffer` que se utiliza para dibujar en la pantalla, si nuestra pantalla es de 128x64 píxel, se necesita que la variable `screen_buffer` ocupará 128x64=8192 bytes, lamentablemente el CH552 tiene una RAM de 256 bytes por lo que no podemos utilizar dicha técnica.
