@@ -4,10 +4,10 @@
 
 #define DS1307_ADDRESS 0x68
 
-#define C_Ds1307ReadMode_U8   0xD1u  // DS1307 ID
-#define C_Ds1307WriteMode_U8  0xD0u  // DS1307 ID
-#define C_Ds1307ControlRegAddress_U8 0x07u
-#define C_Ds1307SecondRegAddress_U8   0x00u   // Address to access Ds1307 SEC register
+#define DS1307_READMODE   0xD1u
+#define DS1307_WRITEMODE  0xD0u
+#define DS1307_ControlRegAddress 0x07u
+#define DS1307_SecondRegAddress   0x00u   // Address to access Ds1307 SEC register
 
 #define PIN_SDA P16
 #define PIN_SCL P17
@@ -33,27 +33,41 @@
 void rtc_init(void) {
     i2c_init();
     i2c_start2();
-    i2c_write2(C_Ds1307WriteMode_U8);
-    i2c_write2(C_Ds1307ControlRegAddress_U8);
+    i2c_write2(DS1307_WRITEMODE);
+    i2c_write2(DS1307_ControlRegAddress);
     i2c_write2(0x00);
     i2c_stop2();
 }
 
-void rtc_get(rtc_t* rtc) {    
+void rtc_set(rtc_t* rtc) {
     i2c_start2();
-    i2c_write2(C_Ds1307WriteMode_U8);      // connect to DS1307 by sending its ID on I2c Bus
-    i2c_write2(C_Ds1307SecondRegAddress_U8); // Request sec RAM address at 00H
+    i2c_write2(DS1307_WRITEMODE);        // connect to DS1307 by sending its ID on I2c Bus
+    i2c_write2(DS1307_SecondRegAddress); // Request sec RAM address at 00H
+    i2c_write2(rtc->second);
+    i2c_write2(rtc->minute);
+    i2c_write2(rtc->hour);
+    i2c_write2(rtc->week_day);
+    i2c_write2(rtc->day);
+    i2c_write2(rtc->month);
+    i2c_write2(rtc->year);
+    i2c_stop2();
+}
+
+void rtc_get(rtc_t* rtc) {
+    i2c_start2();
+    i2c_write2(DS1307_WRITEMODE);      // connect to DS1307 by sending its ID on I2c Bus
+    i2c_write2(DS1307_SecondRegAddress); // Request sec RAM address at 00H
     i2c_stop2();
 
     i2c_start2();
-    i2c_write2(C_Ds1307ReadMode_U8);
-    rtc->second = i2c_read2(1);
-    rtc->minute = i2c_read2(1);
-    rtc->hour   = i2c_read2(1);
-    rtc->day    = i2c_read2(1);
-    rtc->date   = i2c_read2(1);
-    rtc->month  = i2c_read2(1);
-    rtc->year   = i2c_read2(0);
+    i2c_write2(DS1307_READMODE);
+    rtc->second   = i2c_read2(1);
+    rtc->minute   = i2c_read2(1);
+    rtc->hour     = i2c_read2(1);
+    rtc->week_day = i2c_read2(1);
+    rtc->day      = i2c_read2(1);
+    rtc->month    = i2c_read2(1);
+    rtc->year     = i2c_read2(0);
     i2c_stop2();
 }
 
