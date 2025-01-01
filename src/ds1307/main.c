@@ -1,7 +1,7 @@
 #include <ch552.h>
 #include <utils.h>
 #include <ds1307.h>
-#include <oled.h>
+#include <ssd1306.h>
 #include <stdint.h>
 #include <stdio.h>
 
