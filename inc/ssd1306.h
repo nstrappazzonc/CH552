@@ -2,7 +2,6 @@
 #define SSD1306_h
 
 #pragma once
-#include <stdint.h>
 #include "i2c.h"
 
 #define OLED_ADDR         0x78 // OLED write address (0x3C << 1).
