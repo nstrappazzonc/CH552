@@ -10,7 +10,7 @@ En este directorio hay una serie de proyectos hechos con [KiCad](https://www.kic
 
 <img src="https://github.com/nstrappazzonc/CH552/blob/main/hdw/SOIC16/SOIC16.png?raw=true" width="200px">
 
-- [Breakout CH552G](https://github.com/nstrappazzonc/CH552/tree/main/hdw/CH552G) Una PCB con el circuito simple del CH552G.
+- [Breakout CH552G](https://github.com/nstrappazzonc/CH552/tree/main/hdw/CH552G) Una PCB con el circuito del CH552G.
 
 <img src="https://github.com/nstrappazzonc/CH552/blob/main/hdw/CH552G/CH552.png?raw=true" width="200px">
 
