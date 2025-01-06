@@ -13,12 +13,12 @@ typedef struct {
   uint8_t day;
   uint8_t month;
   uint8_t year;
-}rtc_t;
+} rtc_t;
 
 // void rtc_set(rtc_t*);
 void rtc_init(void);
-void rtc_set(rtc_t*);
-void rtc_get(rtc_t*);
+void rtc_set(rtc_t *);
+void rtc_get(rtc_t *);
 void i2c_init(void);
 void i2c_delay2(void);
 void i2c_start2(void);
