@@ -1,0 +1,4 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"J1, J2, J3, J4",PinHeader_1x02_P2.54mm_Vertical,4,Conn_01x02,
+P1,USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,USB_C_Receptacle_USB2.0,
+"R1, R2",1206,2,5.1k,

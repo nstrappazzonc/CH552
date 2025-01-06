@@ -1,4 +1,4 @@
-Designator,Footprint,Quantity,Value,LCSC Part #
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
 J16,PinHeader_1x08_P2.54mm_Vertical,1,SOIC16-P01-P08,
 J17,PinHeader_1x08_P2.54mm_Vertical,1,SOIC16-P09-P16,
 U5,SOIC-16_3.9x9.9mm_P1.27mm,1,CH340C,
