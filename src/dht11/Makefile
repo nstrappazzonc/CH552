@@ -1,4 +1,4 @@
-TARGET = dht20
+TARGET = dht11
 
 C_FILES = \
 	main.c \

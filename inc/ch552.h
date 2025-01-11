@@ -499,25 +499,25 @@ SBIT(CP_RL2, 0xC8, 0); // Timer2 function selection bit. This bit should be
 
 // Port number 1:
 // --------------
-SBIT(P10, 0x90, 0); // P1.0
-SBIT(P11, 0x90, 1); // P1.1
-SBIT(P12, 0x90, 2); // P1.2
-SBIT(P13, 0x90, 3); // P1.3
-SBIT(P14, 0x90, 4); // P1.4
-SBIT(P15, 0x90, 5); // P1.5
-SBIT(P16, 0x90, 6); // P1.6
-SBIT(P17, 0x90, 7); // P1.7
+// SBIT(P10, 0x90, 0); // P1.0
+// SBIT(P11, 0x90, 1); // P1.1
+// SBIT(P12, 0x90, 2); // P1.2
+// SBIT(P13, 0x90, 3); // P1.3
+// SBIT(P14, 0x90, 4); // P1.4
+// SBIT(P15, 0x90, 5); // P1.5
+// SBIT(P16, 0x90, 6); // P1.6
+// SBIT(P17, 0x90, 7); // P1.7
 
 // Port number 3:
 // --------------
-SBIT(P30, 0xB0, 0); // P3.0
-SBIT(P31, 0xB0, 1); // P3.1
-SBIT(P32, 0xB0, 2); // P3.2
-SBIT(P33, 0xB0, 3); // P3.3
-SBIT(P34, 0xB0, 4); // P3.4
-SBIT(P35, 0xB0, 5); // P3.5
-SBIT(P36, 0xB0, 6); // P3.6
-SBIT(P37, 0xB0, 7); // P3.7
+// SBIT(P30, 0xB0, 0); // P3.0
+// SBIT(P31, 0xB0, 1); // P3.1
+// SBIT(P32, 0xB0, 2); // P3.2
+// SBIT(P33, 0xB0, 3); // P3.3
+// SBIT(P34, 0xB0, 4); // P3.4
+// SBIT(P35, 0xB0, 5); // P3.5
+// SBIT(P36, 0xB0, 6); // P3.6
+// SBIT(P37, 0xB0, 7); // P3.7
 
 // Port alias:
 // -----------
