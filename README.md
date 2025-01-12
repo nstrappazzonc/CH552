@@ -1,80 +1,81 @@
 # CH552
 
-Este es un facinante, repotenciado y bien dotado MCU de 8-bit de muy bajo coste (menos de un 1$ aprox.), diseñado y fabricado en china por [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). De momento nos vamos a centrar en el [CH552G](https://www.wch-ic.com/products/CH552.html) que está basado en la arquitectura E8051, lo más atractivo de este MCU es su puerto USB y un oscilador interno de 24Mhz entre otras cosas. Para programarlo nos debemos basar bastante en el [MCS-51](https://en.wikipedia.org/wiki/MCS-51). El fabricante provee un [paquete con una gran variedad de codigos fuentes](https://www.wch.cn/downloads/CH552EVT_ZIP.html). Existen diferentes empaquetados y versiones del MCU cómo; CH551, CH552, CH554 y CH559. El puerto USB entre sus múltiples funciones permite subir el programa de forma simple sin peligro por ser una función nativa. En mi opinión particular, este microcontrolador ideal para el hobby, en proyectos simples y de actitud curiosa.
+This is a fascinating, enhanced, and well-equipped 8-bit MCU, available at an incredibly low cost (around $1), designed and manufactured in China by [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). For now, we will focus on the [CH552G](https://www.wch-ic.com/products/CH552.html), which is based on the E8051 architecture. One of the most appealing features of this MCU is its USB port and a 24MHz internal oscillator, among other functionalities. Programming it requires a strong foundation in [MCS-51](https://en.wikipedia.org/wiki/MCS-51). The manufacturer provides a [package with a wide variety of source codes](https://www.wch.cn/downloads/CH552EVT_ZIP.html). There are different package options and versions of the MCU, such as the CH551, CH552, CH554, and CH559. The USB port, with its multiple functions, allows for easy program uploads, posing no risk as it is a native feature. In my personal opinion, this microcontroller is ideal for hobbyists working on simple projects or for those with a curious mindset.
 
-Puedes conseguir los MCU en la tienda oficial de [AliExpress](https://wchofficialstore.es.aliexpress.com/store/1100367542) o en [LCSC](https://www.lcsc.com).
+
+You can purchase the MCUs from the official store on [AliExpress](https://wchofficialstore.es.aliexpress.com/store/1100367542) or at [LCSC](https://www.lcsc.com).
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/system_block_diagram.png?raw=true)
 
-Por ejemplo, un MCU de la familia AT89LP51 que tiene menos prestaciones y su coste x3 en comparación a la familia CH55X. Obviamente la comunidad para el soporte de Microchip es muy grande y valorable a comparación a la de WCH que apenas empieza, lo importante es que la documentación oficial y la arquitectura sea buena, con paciencia y perseverancia se pueden lograr cosas.
+For example, an MCU from the AT89LP51 family offers fewer features and costs three times more compared to the CH55X family. Of course, the support community for Microchip is much larger and more established compared to WCH’s, which is just starting to grow. However, the key is having good official documentation and a solid architecture. With patience and perseverance, great things can be achieved.
 
-## Especificaciones
+## Specifications
 
-Estas son las especificaciones más relevantes del MCU, para más detalles vea la [documentación oficial](https://www.wch-ic.com/products/CH552.html).
+Here are the most relevant specifications of the MCU. For more details, refer to the [official documentation](https://www.wch-ic.com/products/CH552.html).
 
-- Trabaja entre 5V y 3.3v.
-- Incorpora 16KB Code Flash, 1KB XRAM, 256B iRAM, 128B DataFlash.
-- Soporta los protocolos de comunicación USB 2.0, UART, SPI, ISP.
-- Tiene 3 timer, 2 signal capture, 2 PWM, y 4 ADC.
-- Incorpora BootLoader.
-- Incorpora un reloj interno de 24MHz.
-- Incorpora un identificador numerico único.
-- Encapsulados disponibles: TSSOP-20, SOP-16, MSOP-10.
+- Operates between 5V and 3.3V.
+- Includes 16KB Code Flash, 1KB XRAM, 256B iRAM, and 128B DataFlash.
+- Supports USB 2.0, UART, SPI, and ISP communication protocols.
+- Features 3 timers, 2 signal capture units, 2 PWM, and 4 ADC.
+- Equipped with a BootLoader.
+- Includes a 24MHz internal clock.
+- Comes with a unique numeric identifier.
+- Available packages: TSSOP-20, SOP-16, MSOP-10.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/pinout2.png?raw=true)
 
-El pinout que mostramos es básico para hacerse una idea, hay más funcionalidades en los puertos. Revisar el [datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf?raw=true) para mayor detalle.
+The pinout we are showing is basic, just to give you an idea. There are more functionalities available on the ports. Please refer to the [datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf?raw=true) for more detailed information.
 
-**IMPORTANTE:** Se debe destacar que hay una limitación con la ROM o el Code Flash es un proceso iFlash™, el cual puede ser programado alrededor de 10,000 veces antes de que la memoria Flash pueda empezar a deteriorarse o fallar. Sin embargo, este valor puede variar ligeramente dependiendo de factores como la temperatura de operación y el manejo adecuado de los ciclos de escritura.
+**IMPORTANT:** It’s worth noting that there is a limitation with the ROM or Code Flash, as it uses an iFlash™ process, which can be programmed approximately 10,000 times before the Flash memory may begin to degrade or fail. However, this value can vary slightly depending on factors such as operating temperature and proper handling of write cycles.
 
-## Componentes
+## Components
 
-Use los siguientes componentes para construir el circuito mínimo:
+Use the following components to build the minimum circuit:
 
-- Un microcontrolador CH552G.
-- Condensador de 100nF x2.
-- Resistencia de 10K x2.
-- Resistencia de 1K x2.
-- Dos pulsadores. Uno para el boot y otro para el reset.
+- One CH552G microcontroller.
+- Two 100nF capacitors.
+- Two 10K resistors.
+- Two 1K resistors.
+- Two push buttons: one for boot and one for reset.
 
-## Esquema mínimo
+## Minimum Schematic
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/minimal_schematic.jpg?raw=true)
 
-En el protoboard nos queda de la siguiente forma:
+On the breadboard, it should look like this:
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/minimal_protoboard.jpg?raw=true)
 
-## Códigos fuentes
+## Source Code
 
-En este repositorio tiene una colección de códigos fuentes de ejemplos escritos en C para empezar. Todos los ejemplos listados han sido previamente verificados para garantizar su correcto funcionamiento.
+This repository contains a collection of example source codes written in C to get started. All the listed examples have been thoroughly tested to ensure they function correctly.
 
-- [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captura la variación de voltaje por un puerto de entrada.
-- [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Usa un puerto de salida para encender y apaga un LED.
-- [bootloader](https://github.com/nstrappazzonc/CH552/tree/main/src/bootloader) Fuerza al MCU entrar al modo bootloader por defecto.
-- [button & led rgb](https://github.com/nstrappazzonc/CH552/tree/main/src/button_led_rgb) Interactuar con un pulsador y un LED RGB para cambiar de color.
-- [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Usa un puerto de una entrada para un pulsador y otro puerto de salida para el LED.
-- [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Envia y recibe mensajes por el protocolo UART.
-- [data flash](https://github.com/nstrappazzonc/CH552/tree/main/src/data_flash) Grababa en una memoria persistente el último estado.
-- [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Hace uso del PWM para endencer y apagar un LED con atenuación.
-- [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Uso simple de un módulo OLED con I2C.
-- [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Envia mensajes a través del puerto USB.
+- [adc](https://github.com/nstrappazzonc/CH552/tree/main/src/adc) Captures voltage variations through an input port.
+- [blink](https://github.com/nstrappazzonc/CH552/tree/main/src/blink) Uses an output port to turn an LED on and off.
+- [bootloader](https://github.com/nstrappazzonc/CH552/tree/main/src/bootloader) Forces the MCU to enter bootloader mode by default.
+- [button & led rgb](https://github.com/nstrappazzonc/CH552/tree/main/src/button_led_rgb) Interacts with a button and an RGB LED to change its color.
+- [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Uses one input port for a button and another output port for the LED.
+- [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Sends and receives messages via the UART protocol.
+- [data flash](https://github.com/nstrappazzonc/CH552/tree/main/src/data_flash) Saves the last state in persistent memory.
+- [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Uses PWM to fade a LED on and off.
+- [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Simple usage of an OLED module with I2C.
+- [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Sends messages via the USB port.
 
-## Documentación
+## Documentation
 
-Es una documentación básica de lo que necesitas para compilar y subir el firmware al MCU, el datasheet, enlaces de interés, y mucho más.
+This is basic documentation to help you compile and upload firmware to the MCU, including the datasheet, relevant links, and much more.
 
-- [SDCC (Small Devices C Compiler)](https://github.com/nstrappazzonc/CH552/blob/main/doc/sdcc.md) Explica como instalar y usar el compilador.
-- [Bootloader](https://github.com/nstrappazzonc/CH552/blob/main/doc/flash.md) El MCU tiene un Bootloader que debemos saber como entrar para subir el firmware.
-- [Datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf) Documentación técnica del fabricante.
+- [SDCC (Small Devices C Compiler)](https://github.com/nstrappazzonc/CH552/blob/main/doc/sdcc.md) Explains how to install and use the compiler.
+- [Bootloader](https://github.com/nstrappazzonc/CH552/blob/main/doc/flash.md) The MCU has a bootloader, and you need to know how to enter it to upload the firmware.
+- [Datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf) Technical documentation from the manufacturer.
 
-## Proyectos relacionados
+## Related Projects
 
 - [CH334 - HUB USB 2.0](https://github.com/nstrappazzonc/CH334)
 - [CH340 - USB 2.0 to Serial](https://github.com/nstrappazzonc/CH340)
 - [CH9141 - Bluetooth Serial Transparent](https://github.com/nstrappazzonc/CH9141)
 
-## Proyectos de terceros
+## Third-Party Projects
 
 - [Adafruit CH552 QT Py](https://learn.adafruit.com/adafruit-ch552-qt-py/overview)
 - [English Docs for CH559 Microcontroller](https://kprasadvnsi.github.io/CH559_Doc_English)
