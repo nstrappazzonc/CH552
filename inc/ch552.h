@@ -42,6 +42,9 @@ SFR(T2MOD, 0xC9);     // Timer2 mode register.
 SFR(TCON, 0x88);      // Timer0/1 control register.
 SFR(TH1, 0x8D);       // Timer1 count high bit.
 SFR(TMOD, 0x89);      // Timer0/1 mode register.
+SFR(TL0, 0x8A); // low byte of timer 0 count
+SFR(TL1, 0x8B); // low byte of timer 1 count
+SFR(TH0, 0x8C); // high byte of timer 0 count
 
 SFR(UDEV_CTRL, 0xD1);  // USB device port control register.
 SFR(UEP0_CTRL, 0xDC);  // Endpoint0 control register.
