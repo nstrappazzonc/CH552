@@ -1,12 +1,12 @@
 # Blink
 
-Este es un ejemplo simple de un blink (encendido y apagado con una pausa intermedia), tambien se suele llamar flip flop, que hace uso del puerto P3.0  para enviar un voltaje de 5v y 0v.
+This is a simple blink example (turning on and off with an intermediate pause), also known as a flip-flop, which uses the P3.0 port to send a voltage of 5V and 0V.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/src/blink/schematic.png?raw=true)
 
-En el código fuente mostramos dos formas de hacer lo mismo:
+In the source code, we show two ways to achieve the same result:
 
-## Opción 1
+## Option 1
 
 ```c
 delay(1000);
@@ -15,7 +15,7 @@ delay(1000);
 LED = 1;
 ```
 
-## Opción 2
+## Option 2
 
 ```c
 delay(1000);

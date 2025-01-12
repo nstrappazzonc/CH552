@@ -1,3 +1,3 @@
 # Communication Device Class (CDC)
 
-Este es un ejemplo simple para enviar y recibir texto usando los registros nativos del puerto UART del MCU. Aquí se hace uso del IC [CH340](https://github.com/nstrappazzonc/CH340) para enviar y recibir datos desde el PC al MCU.
+This is a simple example to send and receive text using the native UART port registers of the MCU. It uses the [CH340](https://github.com/nstrappazzonc/CH340) IC to send and receive data between the PC and the MCU.

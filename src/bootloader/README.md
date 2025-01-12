@@ -1,3 +1,3 @@
 # Bootloader
 
-Este simple código fuerza que cada vez que se encienda o se inicia el MCU entre en el modo de bootloader.
+This simple code forces the MCU to enter bootloader mode every time it is powered on or restarted.

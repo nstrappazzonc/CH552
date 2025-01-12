@@ -1,7 +1,7 @@
 # Button
 
-Este es un ejemplo simple de como leer un botón, pulsador o switch.
+This is a simple example of how to read a button, switch, or pushbutton.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/src/button/schematic.png?raw=true)
 
-El circuito esta basado en la configuración del pulsador con resistencia pull-down.
+The circuit is based on the configuration of the button with a pull-down resistor.
