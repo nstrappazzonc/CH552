@@ -1,7 +1,7 @@
 # Communication Device Class (CDC/TX)
 
-Este es un ejemplo de lo más simplificado del código fuente para enviar texto usando los registros nativos del puerto USB del MCU.
+This is an example of the most simplified source code to send text using the native USB port registers of the MCU.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/src/usb/cdc/tx/CoolTerm.png?raw=true)
 
-Para ir entendiendo cómo funciona el protocolo USB, lea la siguiente documentación [USB in a NutShell](https://www.beyondlogic.org/usbnutshell/usb1.shtml).
+To better understand how the USB protocol works, refer to the following documentation: [USB in a NutShell](https://www.beyondlogic.org/usbnutshell/usb1.shtml).
