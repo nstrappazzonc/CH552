@@ -1,6 +1,6 @@
 # Pulseview
 
-Open Source software for logic analyze development by [sigrok](https://sigrok.org/wiki/PulseView). El dispositivo que uso es el [nanoDLA](https://github.com/wuxx/nanoDLA) que funciona muy bien.
+Open Source software for logic analyze development by [sigrok](https://sigrok.org/wiki/PulseView). El dispositivo que uso es el [nanoDLA](https://github.com/wuxx/nanoDLA) que funciona muy bien, asegurate de tenerlo correctamente [configurado](https://github.com/nstrappazzonc/CH552/blob/main/doc/logic_analyze.md).
 
 ## Windows
 
