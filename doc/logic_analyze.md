@@ -6,7 +6,7 @@ Al conectar el dispositivo en Windows 11 podemos verificar si lo reconoce hacien
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/doc/logic_analyze/windows01.png?raw=true)
 
-Al no estar reconocido, deberá instalar el controlador mediante la herramienta `zadig`.
+Al no estar reconocido, deberá instalar el controlador mediante la herramienta `zadig`. Escriba la siguiente línea en el PowerShell:
 
 ```powershell
 winget install 
