@@ -11,6 +11,6 @@ winget install pulseview
 winget install --id=Microsoft.VCRedist.2010.x64  -e
 ```
 
-Al iniciar Pulseview, podrá seleccionar el dispositivo para capturar los datos:
+Al iniciar Pulseview, podrá seleccionar el dispositivo `sigrok FX2 LA (8ch)` para capturar los datos:
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/doc/pulseview/pulseview01.png?raw=true)
