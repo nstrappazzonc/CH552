@@ -5,10 +5,8 @@ Open Source software for logic analyze development by [sigrok](https://sigrok.or
 ## Windows
 
 ```powershell
-winget install zadig
 winget install pulseview
 winget install --id=Microsoft.VCRedist.2010.x64  -e
 ```
 
-Configure device:
-
+![](https://github.com/nstrappazzonc/CH552/blob/main/assets/doc/pulseview/pulseview01.png?raw=true)
