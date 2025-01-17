@@ -1,6 +1,8 @@
 #include <ch552.h>
 #include <utils.h>
 
+SBIT(P30, 0xB0, 0);
+
 #define LED P30
 
 void main(void) {
