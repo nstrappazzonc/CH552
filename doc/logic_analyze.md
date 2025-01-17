@@ -20,4 +20,4 @@ Al iniciar `zadig`, detectará el dispositivo nuevo y podrá instalar el control
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/doc/logic_analyze/windows04.png?raw=true)
 
-Una vez instalado el controlador, podra observar en el `Device Manager` que aparece en un nuevo sitio `Universal Serial Bus devices`.
+Una vez instalado el controlador, no se requiere reiniciar, y podra observar en el `Device Manager` que aparece en un nuevo sitio `Universal Serial Bus devices`.
