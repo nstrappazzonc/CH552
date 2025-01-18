@@ -4,7 +4,7 @@
 CC       = sdcc
 OBJCOPY  = objcopy
 PACK_HEX = packihx
-WCHISP  ?= ../../tools/wchisp flash 
+WCHISP  ?= ../../tools/linux/wchisp flash 
 
 #######################################################
 
