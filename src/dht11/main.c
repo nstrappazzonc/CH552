@@ -4,29 +4,30 @@
 #include <ssd1306.h>
 #include <stdio.h>
 
-SBIT(P32, 0xB0, 2); // P3.2
+// SBIT(P32, 0xB0, 2); // P3.2
+SBIT(P33, 0xB0, 3); // P3.3
 
-#define DHT11 P32
+#define DHT11 P33
 
-uint8_t I_H, D_H, I_T, D_T, CheckSum; 
+uint8_t I_H, D_H, I_T, D_T, CheckSum;
 
 uint8_t receive_data(void) {
     uint8_t byte = 0;
     for (uint8_t i=0; i<8; i++) {
         while(!DHT11);
 
-        delay_us(40);
-        byte <<= 1;
-        byte |= DHT11;
-        // if(DHT11){
-        //     // c <<= 1;
+        delay_us(60);   
+        // byte <<= 1;
+        // byte |= DHT11;
+        if(DHT11){
+            byte <<= 1;
         //     byte = (byte<<1)|(0x01);
-        // }else{
-        //     // c |= 1;
+        }else{
+            byte |= 1;
         //     byte = (byte<<1);
-        // }
+        }
 
-        // while(!DHT11);
+        // while(DHT11);
     }
     return byte;
 }
@@ -38,21 +39,24 @@ void main(void) {
     oled_init();
     delay(100);
 
-    P3_MOD_OC |= (1 << DHT11);
-    P3_DIR_PU |= (1 << DHT11);
+
 
     // PIN_high(DHT11);
 
     oled_cursor(0,0);
     oled_print("DHT11");
 
+    uint8_t counter = 0;
+
     while(1) {
         // PIN_high(DHT11);
         // delay(10);
 
+        P3_MOD_OC |= (1 << DHT11);
+        P3_DIR_PU |= (1 << DHT11);
         // PIN_low(DHT11);
         DHT11 = 0;
-        delay(18);
+        delay(20);
         DHT11 = 1;
         // PIN_high(DHT11);
 
@@ -75,7 +79,8 @@ void main(void) {
         I_T     = receive_data(); // store next eight bit in I_Temp.
         D_T     = receive_data(); // store next eight bit in D_Temp.
         CheckSum = receive_data(); // store next eight bit in CheckSum.
-
+        // oled_cursor(0,4);
+        // oled_print("-> Ok 4");
         if ((I_H + D_H + I_T + D_T) != CheckSum) { // TODO: If x == 0 is err.
             oled_cursor(0,4);
             oled_print("-> Sensor Error.");
@@ -84,9 +89,13 @@ void main(void) {
             oled_print("-> Sensor Ok.");
         }
 
-        // sprintf(dat, "T: %d.%dC", I_Temp, D_Temp);
-        // oled_cursor(0,5);
-        // oled_print(dat);
+        sprintf(dat, "T: %d.%dC", I_T, D_T);
+        oled_cursor(0,5);
+        oled_print(dat);
+
+        sprintf(dat, "L: %d", counter++);
+        oled_cursor(0,7);
+        oled_print(dat);
 
         delay(1000);
     }
