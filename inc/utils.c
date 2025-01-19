@@ -48,10 +48,6 @@ void delay_ms(unsigned int ms) {
 }
 
 void init(void) {
-  // Set to low all pins P1.x and P3.x:
-  P1 = 0;
-  P3 = 0;
-
   // Set internal oscilator:
   SAFE_MOD = 0x55;
   SAFE_MOD = 0xAA;
@@ -64,4 +60,6 @@ void init(void) {
   // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x01;  // 750KHz	
   // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x00;  // 187.5MHz
   SAFE_MOD = 0x00;
+  // Wait to stablize internal RC.
+  delay_ms(100);
 }
