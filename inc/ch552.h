@@ -12,7 +12,7 @@
 #pragma once
 #include <compiler.h>
 
-#define F_CPU 24000000 // Default clock frequency.
+// #define F_CPU 24000000 // Default clock frequency.
 
 // Registers:
 // ----------

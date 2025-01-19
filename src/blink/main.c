@@ -19,7 +19,7 @@ void main(void) {
     // LED = 1;
 
     // Option 2:
-    delay(1000);
+    delay_ms(1000);
     LED = !LED;
   }
 }

@@ -8,7 +8,6 @@ WCHISP  ?= ../../tools/linux/wchisp flash
 
 #######################################################
 
-FREQ_SYS  = 24000000
 XRAM_LOC  = 0x0000
 XRAM_SIZE = 0x0400
 CODE_SIZE = 0x3800
@@ -20,8 +19,7 @@ CFLAGS   := -mmcs51 \
 	--opt-code-size \
 	--model-small \
 	--code-size $(CODE_SIZE) \
-	-I$(ROOT_DIR)../inc -I. \
-	-DF_CPU=$(FREQ_SYS)
+	-I$(ROOT_DIR)../inc -I.
 
 LFLAGS := $(CFLAGS)
 RELS := $(C_FILES:.c=.rel)

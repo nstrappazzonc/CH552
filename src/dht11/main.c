@@ -16,7 +16,7 @@ uint8_t receive_data(void) {
     for (uint8_t i=0; i<8; i++) {
         while(!DHT11);
 
-        delay_us(60);   
+        mDelayuS(30);
         // byte <<= 1;
         // byte |= DHT11;
         if(DHT11){
@@ -27,7 +27,7 @@ uint8_t receive_data(void) {
         //     byte = (byte<<1);
         }
 
-        // while(DHT11);
+        while(DHT11);
     }
     return byte;
 }
@@ -36,8 +36,10 @@ void main(void) {
     unsigned char dat[20];
 
     init();
+    mDelayuS(5000);
+
     oled_init();
-    delay(100);
+    
 
 
 
@@ -56,7 +58,7 @@ void main(void) {
         P3_DIR_PU |= (1 << DHT11);
         // PIN_low(DHT11);
         DHT11 = 0;
-        delay(20);
+        delay(18);
         DHT11 = 1;
         // PIN_high(DHT11);
 

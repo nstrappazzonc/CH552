@@ -1,75 +1,50 @@
 #include <ch552.h>
-#include <stdint.h>
 
-// Delay in us (microseconds) There are 1000 microseconds in a milliseconds:
-void delay_us(uint16_t n) {
-  // n >>= 2;
-	while (n) {
-		++ SAFE_MOD;
-    ++ SAFE_MOD;
-    ++ SAFE_MOD;
-    ++ SAFE_MOD;
-    ++ SAFE_MOD;
-    ++ SAFE_MOD;
-    // ++ SAFE_MOD;
-    -- n;
-	}
+// Function for microsecond delay
+void delay_us(unsigned int us) {
+    unsigned char interrupt_state = EA; // Save the current interrupt state
+    EA = 0; // Disable global interrupts to ensure precise timing
 
-  // __asm__(
-  //     ".even                                    \n"
-  //     "    mov  r6, dpl                         \n" // low 8-bit
-  //     "    mov  r7, dph                         \n" // high 8-bit
-  //     "    clr  c                               \n"
-  //     "    mov  a,#0x01                         \n"
-  //     "    subb a, r6                           \n"
-  //     "    clr  a                               \n"
-  //     "    subb a, r7                           \n"
-  //     "    jc skip_0us$                         \n"
-  //     "    ret                                  \n" // return if 0 1 us
-  //                                                   // about 1.2us total
-  //     "    nop                                  \n"
-  //     "skip_0us$:                               \n"
-  //     "    clr  c                               \n" // do some loop init, not
-  //                                                   // useful for 2us but better
-  //                                                   // here
-  //     "    mov  a, #0x02                        \n"
-  //     "    subb a, r6                           \n"
-  //     "    mov  r6, a                           \n"
-  //     "    mov  a, #0x00                        \n"
-  //     "    subb a, r7                           \n"
-  //     "    mov  r7, a                           \n"
+    unsigned int initial_value;
 
-  //     "    nop                                  \n" // keep even
-  //     "    cjne r6,#0x00,loop24m_us$            \n"
-  //     "    cjne r7,#0x00,loop24m_us$            \n"
-  //     "    nop                                  \n"
-  //     "    ret                                  \n" // return if 2us  about 2 us
-  //                                                   // total
+    // Limit the maximum delay to 65,535 μs
+    if (us > 65535) {
+        us = 65535;
+    }
 
-  //     "loop24m_us$:                             \n" // about nus
+    // Calculate the initial timer value for the desired delay
+    initial_value = 65536 - us;
 
-  //     "    nop \n nop \n nop \n nop \n nop \n    " // 6+11 cycle
-  //     "    nop \n "
-  //     "loop24m_us_2$:                          \n" // need more test
+    // Configure Timer 0 in Mode 1 (16-bit mode)
+    TMOD = 0x01; 
+    TH0 = (initial_value >> 8) & 0xFF; // Set the high byte
+    TL0 = initial_value & 0xFF;       // Set the low byte
 
-  //     "    nop \n nop \n nop \n nop \n nop \n    "
-  //     "    nop \n nop \n nop \n nop \n nop \n    "
-  //     "    nop \n                                "
+    // Start Timer 0
+    TR0 = 1;
+    // Wait for Timer 0 to overflow
+    while (TF0 == 0);
+    // Stop Timer 0 and clear the overflow flag
+    TR0 = 0;
+    TF0 = 0;
 
-  //     "    inc  r6                              \n" // 1 cycle
-  //     "    cjne r6, #0,loop24m_us$              \n" // 6 cycle
-  //     "    inc  r7                              \n" // there will be extra 1
-  //                                                   // cycles for every 256us
-  //     "    cjne r7, #0,loop24m_us_2$            \n"
-  //     "    nop                                  \n");
+    // Restore the previous interrupt state
+    EA = interrupt_state;
 }
 
-// Delay in ms (milliseconds). There are 1000 milliseconds in a second:
-void delay(uint16_t n) {
-  while (n) {
-    delay_us(1000);
-    --n;
-  }
+// Function for millisecond delay
+void delay_ms(unsigned int ms) {
+    unsigned char interrupt_state = EA; // Save the current interrupt state
+    EA = 0; // Disable global interrupts to ensure precise timing
+
+    // Loop through each millisecond, using delay_us(1000)
+    while (ms > 0) {
+        delay_us(1000); // 1 millisecond = 1000 microseconds
+        ms--;
+    }
+
+    // Restore the previous interrupt state
+    EA = interrupt_state;
 }
 
 void init(void) {
@@ -80,7 +55,13 @@ void init(void) {
   // Set internal oscilator:
   SAFE_MOD = 0x55;
   SAFE_MOD = 0xAA;
-  CLOCK_CFG = CLOCK_CFG & ~MASK_SYS_CK_SEL | 0x06; // 24MHz
+  // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x07;  // 32MHz	
+	// CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x06;  // 24MHz	
+  // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x05;  // 16MHz	
+  CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x04;  // 12MHz
+  // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x03;  // 6MHz	
+  // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x02;  // 3MHz	
+  // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x01;  // 750KHz	
+  // CLOCK_CFG = CLOCK_CFG & ~ MASK_SYS_CK_SEL | 0x00;  // 187.5MHz
   SAFE_MOD = 0x00;
-  delay_us(5000); // Is needed to stablize internal RC.
 }
