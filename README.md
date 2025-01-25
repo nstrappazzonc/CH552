@@ -63,6 +63,7 @@ This repository contains a collection of example source codes written in C to ge
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Uses PWM to fade a LED on and off.
 - [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Simple usage of an OLED module with I2C.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Sends messages via the USB port.
+- [DHT11](https://github.com/nstrappazzonc/CH552/tree/main/src/dht11) Read DHT11 sensor and print to OLED module.
 
 ## Documentation
 
