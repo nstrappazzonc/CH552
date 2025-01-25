@@ -31,7 +31,7 @@ The pinout we are showing is basic, just to give you an idea. There are more fun
 1. The internal 24MHz clock is not precise, you can adjust it by software using a logic analyze, otherwise you will have to use an external one.
 2. It’s worth noting that there is a limitation with the ROM or Code Flash, as it uses an iFlash™ process, which can be programmed approximately 10,000 times before the Flash memory may begin to degrade or fail. However, this value can vary slightly depending on factors such as operating temperature and proper handling of write cycles.
 
-## Components
+## Minimum Schematic
 
 Use the following components to build the minimum circuit:
 
@@ -40,8 +40,6 @@ Use the following components to build the minimum circuit:
 - Two 10K resistors.
 - Two 1K resistors.
 - Two push buttons: one for boot and one for reset.
-
-## Minimum Schematic
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/minimal_schematic.jpg?raw=true)
 
