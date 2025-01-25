@@ -1,4 +1,5 @@
 .DS_Store
+*.:Zone.Identifier
 *-backups
 *.asm
 *.bin
