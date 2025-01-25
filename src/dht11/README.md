@@ -4,7 +4,7 @@ Este sensor opera entre 3.3V y 5.5V, usa un protocolo de comunicación propietar
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/src/dht11/protoboard.jpeg)
 
-La conexión entre el sensor y el MCU es muy simple, puedes escoger cualquier pin disponible, en este caso se usó el P3.2. Siga el siguiente diagrama:
+La conexión entre el sensor y el MCU es muy simple, puedes escoger cualquier pin disponible, en este caso se usó el P3.2:
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/src/dht11/schematic.png)
 
