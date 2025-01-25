@@ -2,8 +2,8 @@
 
 // Function for microsecond delay
 void delay_us(unsigned int us) {
-    unsigned char interrupt_state = EA; // Save the current interrupt state
-    EA = 0; // Disable global interrupts to ensure precise timing
+    // unsigned char interrupt_state = EA; // Save the current interrupt state
+    // EA = 0; // Disable global interrupts to ensure precise timing
 
     unsigned int initial_value;
 
@@ -29,13 +29,13 @@ void delay_us(unsigned int us) {
     TF0 = 0;
 
     // Restore the previous interrupt state
-    EA = interrupt_state;
+    // EA = interrupt_state;
 }
 
 // Function for millisecond delay
 void delay_ms(unsigned int ms) {
-    unsigned char interrupt_state = EA; // Save the current interrupt state
-    EA = 0; // Disable global interrupts to ensure precise timing
+    // unsigned char interrupt_state = EA; // Save the current interrupt state
+    // EA = 0; // Disable global interrupts to ensure precise timing
 
     // Loop through each millisecond, using delay_us(1000)
     while (ms > 0) {
@@ -44,7 +44,7 @@ void delay_ms(unsigned int ms) {
     }
 
     // Restore the previous interrupt state
-    EA = interrupt_state;
+    // EA = interrupt_state;
 }
 
 void init(void) {
