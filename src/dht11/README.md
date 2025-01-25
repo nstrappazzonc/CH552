@@ -12,7 +12,7 @@ La conexión entre el sensor y el MCU es muy simple, puedes escoger cualquier pi
 
 ## Single wire protocol
 
-El DHT11 usa un solo cable para comunicarse, comenzando con una señal de inicio del microcontrolador: el pin se pone en nivel bajo por al menos 18 ms y luego se libera (nivel alto). El sensor responde con un pulso bajo de 80 µs seguido de un pulso alto de 80 µs para indicar que está listo. A continuación, el DHT11 envía 40 bits de datos (5 bytes) que representan la humedad entera, humedad decimal, temperatura entera, temperatura decimal y un checksum para validar los datos. Cada bit comienza con un pulso bajo de 50 µs, seguido de un pulso alto cuya duración indica si es un "0" (~26-28 µs) o un "1" (~70 µs). La comunicación requiere sincronización precisa para interpretar los datos correctamente.
+El DHT11 usa un solo cable para comunicarse, comenzando con una señal de inicio del microcontrolador: el pin se pone en nivel bajo por al menos 18 ms y luego se libera (nivel alto). El sensor responde con un pulso bajo de 80 µs seguido de un pulso alto de 80 µs para indicar que está listo. A continuación, el DHT11 envía 40 bits de datos (5 bytes), los dos primeros bytes representan la humedad entera y decimal, luego los siguientes dos bytes representan la temperatura entera y decimal, por último un byte que es un checksum para validar los datos.
 
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/doc/pulseview/dht11_02.png)
 
