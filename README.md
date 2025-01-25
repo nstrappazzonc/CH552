@@ -58,10 +58,10 @@ This repository contains a collection of example source codes written in C to ge
 - [button](https://github.com/nstrappazzonc/CH552/tree/main/src/button) Uses one input port for a button and another output port for the LED.
 - [cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/cdc) Sends and receives messages via the UART protocol.
 - [data flash](https://github.com/nstrappazzonc/CH552/tree/main/src/data_flash) Saves the last state in persistent memory.
+- [DHT11](https://github.com/nstrappazzonc/CH552/tree/main/src/dht11) Read DHT11 sensor and print to OLED module.
 - [fade](https://github.com/nstrappazzonc/CH552/tree/main/src/fade) Uses PWM to fade a LED on and off.
 - [oled module](https://github.com/nstrappazzonc/CH552/tree/main/src/ssd1306) Simple usage of an OLED module with I2C.
 - [USB/cdc](https://github.com/nstrappazzonc/CH552/tree/main/src/usb/cdc/tx) Sends messages via the USB port.
-- [DHT11](https://github.com/nstrappazzonc/CH552/tree/main/src/dht11) Read DHT11 sensor and print to OLED module.
 
 ## Documentation
 
