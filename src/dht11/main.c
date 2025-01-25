@@ -51,10 +51,8 @@ uint8_t DHT11_ReadByte(void) {
 
 void main(void) {
     unsigned char dat[20];
-    uint8_t counter = 0;
 
     init();
-    delay_ms(1000);
     oled_init();
     oled_cursor(0,0);
     oled_print("DHT11");
@@ -68,19 +66,16 @@ void main(void) {
         CS = DHT11_ReadByte();
     
         if ((IH + DH + IT + DT) != CS) {
-            oled_cursor(0,4);
+            oled_cursor(0,2);
             oled_print("-> Sensor read error.");
+        } else {
+            sprintf(dat, "T: %d.%dC", IT, DT);
+            oled_cursor(0,3);
+            oled_print(dat);
+            sprintf(dat, "H: %d%%", IH);
+            oled_cursor(0,4);
+            oled_print(dat);
         }
-
-        sprintf(dat, "T: %d.%d", IT, DT);
-        oled_cursor(0,5);
-        oled_print(dat);
-        sprintf(dat, "H: %d.%d", IH, DH);
-        oled_cursor(0,6);
-        oled_print(dat);
-        sprintf(dat, "L: %d", counter++);
-        oled_cursor(0,7);
-        oled_print(dat);
 
         delay_ms(1000);
     }
