@@ -1,6 +1,6 @@
 # Logic analyze
 
-El dispositivo que vamos a configurar en Windows 11 es [nanoDLA](https://github.com/wuxx/nanoDLA), para otros sistemas operativos como MAC OS y Linux no hace falta.
+El dispositivo que vamos a configurar en Windows 11 es [nanoDLA](https://github.com/wuxx/nanoDLA), para otros sistemas operativos como MAC OS y Linux no hace falta. Una vez que este operativo, podra usar el software [Pulseview](https://github.com/nstrappazzonc/CH552/blob/main/doc/pulseview.md) para capturar y explorar.
 
 Al conectar el dispositivo en Windows 11 podemos verificar si lo reconoce haciendo uso del `Device Manager`, cómo se puede observar en `Other devices`, esta identificado cómo `fx2lafw`.
 
