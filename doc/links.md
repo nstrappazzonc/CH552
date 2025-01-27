@@ -52,6 +52,7 @@ https://github.com/gurubrahmayya/Digital-clock-using-RTC-DS1307-8051/tree/master
 https://github.com/saurubh/8051-Tutorial/tree/master
 https://www.electronicshub.org/basics-of-embedded-c-program/
 https://www.electronicwings.com/8051/introduction-to-8051-controller
+https://www.8051projects.net/t54498-p10/8051-discussion-forum/musical-tone-generation-for-8051.htm
 
 # Fonts
 
@@ -63,3 +64,15 @@ https://github.com/idispatch/raster-fonts
 
 https://github.com/robsoncouto/arduino-songs
 https://github.com/hibit-dev/buzzer
+
+## Tones
+
+https://thecustomizewindows.com/2018/06/arduino-basic-piano-for-children-pushbutton-buzzer/
+https://docs.arduino.cc/built-in-examples/digital/toneMelody/
+https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/
+https://github.com/bhagman/Tone
+https://github.com/arduino/arduino-examples/blob/main/examples/02.Digital/toneMelody/pitches.h
+
+# PIC
+
+https://www.circuitbread.com/tutorials/musical-microcontroller-part-8-microcontroller-basics-pic10f200
