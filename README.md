@@ -27,10 +27,9 @@ Here are the most relevant specifications of the MCU. For more details, refer to
 
 The pinout we are showing is basic, just to give you an idea. There are more functionalities available on the ports. Please refer to the [datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf?raw=true) for more detailed information.
 
-**IMPORTANT:**
-
-1. The internal 24MHz clock is not precise but in the most cases is good, you can adjust it by software using a logic analyze, otherwise you will have to use an external one.
-2. It’s worth noting that there is a limitation with the ROM or Code Flash, as it uses an iFlash™ process, which can be programmed approximately 10,000 times before the Flash memory may begin to degrade or fail. However, this value can vary slightly depending on factors such as operating temperature and proper handling of write cycles. In any case, it is enough.
+> [!IMPORTANT]
+> 1. The internal 24MHz clock is not precise but in the most cases is good, you can adjust it by software using a logic analyze, otherwise you will have to use an external one.
+> 2. It’s worth noting that there is a limitation with the ROM or Code Flash, as it uses an iFlash™ process, which can be programmed approximately 10,000 times before the Flash memory may begin to degrade or fail. However, this value can vary > slightly depending on factors such as operating temperature and proper handling of write cycles. In any case, it is enough.
 
 ## Minimum Schematic
 
