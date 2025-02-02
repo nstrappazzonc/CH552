@@ -1,4 +1,4 @@
-# Microcontroller CH552 by a hobbyist
+# Microcontroller CH552G by a hobbyist
 
 This is a fascinating, enhanced, and well-equipped 8-bit microcontroller, available at an incredibly low cost (around $1), designed and manufactured in China by [Jiangsu Heng Qin Ltd. (WCH)](http://www.wch-ic.com). For now, we will focus on the [CH552G](https://www.wch-ic.com/products/CH552.html), which is based on the E8051 architecture. One of the most appealing features of this MCU is its USB port and a 24MHz internal oscillator, among other functionalities. Programming it requires a strong foundation in [MCS-51/80C51](https://en.wikipedia.org/wiki/MCS-51). The manufacturer provides a [package with a wide variety of source codes](https://www.wch.cn/downloads/CH552EVT_ZIP.html). There are different package options and versions of the MCU, such as the CH551, CH552, CH554, and CH559. The USB port, with its multiple functions, allows for easy program uploads, posing no risk as it is a native feature. In my personal opinion, this microcontroller is ideal for hobbyists working on simple projects or for those with a curious mindset.
 
