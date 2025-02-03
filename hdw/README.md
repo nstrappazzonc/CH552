@@ -1,6 +1,8 @@
 # Hardware
 
-En este directorio hay una serie de proyectos hechos con [KiCad](https://www.kicad.org) relacionados al CH552. Las placas se pueden mandar a construir en [JLCPCB](https://jlcpcb.com).
+En este directorio hay una serie de proyectos hechos con [KiCad](https://www.kicad.org) relacionados al CH552G.
+
+Las placas se pueden mandar a construir en [JLCPCB](https://jlcpcb.com).
 
 - [Minimal](https://github.com/nstrappazzonc/CH552/tree/main/hdw/minimal) Esquema mínimo del circuito para el CH552G.
 
