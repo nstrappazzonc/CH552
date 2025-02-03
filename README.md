@@ -6,7 +6,9 @@ A major difference of this microcontroller compared to other microcontrollers is
 
 You can purchase the MCUs from the official store on [AliExpress](https://wchofficialstore.es.aliexpress.com/store/1100367542) or at [LCSC](https://www.lcsc.com).
 
+<p align="center">
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/system_block_diagram.png?raw=true)
+</p>
 
 For example, an MCU from the AT89LP51 family offers fewer features and costs three times more compared to the CH55X family. Of course, the support community for Microchip is much larger and more established compared to WCH’s, which is just starting to grow. However, the key is having good official documentation and a solid architecture. With patience and perseverance, great things can be achieved.
 
@@ -23,7 +25,9 @@ Here are the most relevant specifications of the MCU. For more details, refer to
 - Comes with a unique numeric identifier.
 - Available packages: TSSOP-20, SOP-16, MSOP-10.
 
+<p align="center">
 ![](https://github.com/nstrappazzonc/CH552/blob/main/assets/pinout2.png?raw=true)
+</p>
 
 The pinout we are showing is basic, just to give you an idea. There are more functionalities available on the ports. Please refer to the [datasheet](https://github.com/nstrappazzonc/CH552/blob/main/doc/CH552.pdf?raw=true) for more detailed information.
 
