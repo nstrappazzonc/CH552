@@ -8,7 +8,7 @@ En este directorio hay una serie de proyectos hechos con [KiCad](https://www.kic
 
 - [Breakout SOIC16](https://github.com/nstrappazzonc/CH552/tree/main/hdw/SOIC16) Una simple PCB para poder soldar el CH552G y poder trabajar en el protoboard.
 
-<img src="https://github.com/nstrappazzonc/CH552/blob/main/assets/hdw/soic16/soic16.png?raw=true" width="200px">
+<img src="https://github.com/nstrappazzonc/CH552/blob/main/assets/hdw/soic16/SOIC16.png?raw=true" width="200px">
 
 - [Breakout USB-C 2.0](https://github.com/nstrappazzonc/CH552/tree/main/hdw/USBC2) Una simple PCB para poder soldar el conector USB-C 2.0 y poder trabajar en el protoboard teniendo un excelente soporte que lo fija bien.
 
